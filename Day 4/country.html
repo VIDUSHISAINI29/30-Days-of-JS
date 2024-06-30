@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
+        let countries_info = []
+        let upper_countries = []
+        let short_countries = []
+        let countries_length = []
+        countries.forEach(country => {
+            upper_countries.push(country.toUpperCase())
+            short_countries.push(country.toUpperCase().slice(0, 3))
+            countries_length.push(country.length)
+        })
+        let temp_arr = []
+        countries.forEach((country, index) => {
+            console.log(country)
+            temp_arr = []
+            temp_arr.push(upper_countries[index], short_countries[index], countries_length[index])
+            countries_info.push(temp_arr)
+        })
+
+        console.log(countries_info)
+
+    </script>
+</body>
+
+</html>

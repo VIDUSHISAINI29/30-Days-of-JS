@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let Challenge = "30 Days of Java Script";
+        console.log(Challenge)
+
+        let string = "i am Vidushi Saini";
+        console.log(string.length)
+
+        console.log(string.toUpperCase())
+
+        console.log(string.toLowerCase())
+
+        console.log(string.substr(0, 17))
+
+        console.log(string.substring(0, 10))
+
+
+        // impques7
+
+        console.log(Challenge.substr(3, 19))
+
+        // ..
+
+        console.log(string.includes('script'))
+
+        console.log(string.split(""))
+
+        console.log(Challenge.split())
+
+
+        // imp ques 11
+        let companies = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon';
+        console.log(companies.split(","))
+
+        console.log(Challenge.replace("Java Script", "Python"))
+
+        console.log(Challenge.charAt(16))
+
+        console.log(Challenge.charCodeAt("3"))
+
+        console.log(Challenge.indexOf("a"))
+
+        console.log(Challenge.lastIndexOf("a"))
+
+        let sentence = 'You cannot end a sentence with because because because is a conjunction'
+
+        console.log(sentence.indexOf("because"))
+
+        console.log(sentence.lastIndexOf("because"))
+
+        console.log(sentence.search("because"))
+
+
+        let java = "                  30 Days of Java Script         ";
+
+        console.log(java.trim())
+
+        console.log(Challenge.startsWith("30"))
+
+        console.log(Challenge.endsWith("Script"))
+
+        console.log(Challenge.match("a"))
+
+        let part = "30 Days of"
+
+        console.log(part.concat("Java Script"))
+
+        console.log(Challenge.repeat(2))
+
+        let line = "The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another"
+        console.log(line)
+
+        console.log("The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another")
+
+        console.log("Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead.")
+
+        let mark = '10';
+        let numInt = parseInt(mark);
+        console.log(numInt)
+
+        let marks = '10';
+        let num = Number(marks);
+        console.log(num);
+
+        let number = '10'
+        let nums = +number;
+        console.log(nums)
+        console.log(typeof nums)
+
+
+        let foalt = '9.8';
+        let digit = 10;
+        let float = parseFloat(foalt);
+        let numbers = parseInt(float);
+        console.log(Math.ceil(numbers));
+        console.log(numbers);
+        console.log(typeof (foalt) == typeof (digit));
+
+        // it is not 10 so let me make it 10
+
+        foalt = 10;
+        console.log(foalt);
+
+        let python = "python";
+        let jagron = "jagron";
+        let isInBoth = python.includes('on')
+            & jagron.includes('on');
+
+        console.log(isInBoth);
+
+        let sentence2 = "I hope this course is not full of jargon";
+        let isIn = sentence2.includes('jargon');
+        console.log(isIn);
+
+        let marking = Math.floor(Math.random() * 101);
+        console.log(marking);
+        let markin = Math.floor(Math.random() * 50) + 50;
+        console.log(markin);
+        let two = Math.floor(Math.random() * 255);
+        console.log(two);
+
+        // most imp ques 10 ex-level 2
+
+        let str = 'Javascript';
+        let index = Math.floor(Math.random() * str.length);
+        let done = str[index];
+        console.log(done);
+        let pattern = '1 1 1 1 1\n2 1 2 4 8\n3 1 3 9 27\n4 1 4 16 64\n5 1 5 25 125';
+        console.log(pattern);
+
+        console.log(sentence.substr(31, 23));
+
+        // The sentence
+let sent = 'Love is the best thing in this world. Some found their love and some are still looking for their love.' 
+
+let low = sent.toLowerCase();
+let lovecount = 0;
+let words = low.split(/\W+/);
+for (let word of words)
+{if(word ==='love'){
+    lovecount++;
+}}
+console.log('this much ${lovecount}')
+
+
+// EXERCISE : LEVEL-3
+
+// Ques 2
+
+let senten = 'You cannot end a sentence with because because because is a conjunction';
+let patt = /because/gi;
+console.log(senten.match(patt).length);
+
+// Ques 1
+
+let love = 'Love is the best thing in this world. Some found their love and some are still looking for their love.' ;
+let patt2 = /love/gi;
+console.log(love.match(patt2).length);
+
+// Ques 3
+
+const regex = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching';
+let patt3 = /[^\w.,? ]+/g;
+console.log(regex.match(patt3) );
+console.log(regex.replace(/[^\w.,? ]+/g,''));
+
+// Ques 4
+
+let data = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.';
+let patt4 = /\d+/g;
+console.log(data.match(patt4));
+let digits = data.match(patt4);
+ let spm = parseInt(digits[0]*12);
+ let cpm = parseInt(digits[2]*12);
+ let result = spm+parseInt(digits[1])+cpm;
+ console.log(result);
+
+// Done
+
+
+
+    </script>
+
+</body>
+
+</html>

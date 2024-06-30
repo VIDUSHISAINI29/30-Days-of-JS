@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EX 6</title>
+</head>
+
+<body>
+
+  <script>
+
+    // Exercise : level 1 
+
+    // ******************  Ques 1  ******************
+
+    //  #####  using FOR loop  #####
+
+    //         const countries = [
+    //   'Albania','Bolivia','Canada','Denmark','Ethiopia','Finland','Germany','Hungary','Ireland','Japan','Kenya'
+    // ];
+    // for(i=0; i < countries.length ; i++){
+    //     console.log(countries[i]);
+    // }
+
+    //         //   ##### using WHILE loop  #####
+
+    //         let b =  0;
+    //         while(b < countries.length){
+    //             console.log(countries[b]);
+    //             b++;
+    //         }
+
+    //         // ##### using Do-While #####
+
+
+    // let c = 0;
+    // do{
+    //     console.log(countries[c]);
+    //     c++;
+    // }while(c < countries.length)
+
+
+    // ******************  Ques 2  ******************
+
+    //     // #### using For loop ####
+    //   const countriess = [
+    //   'Albania','Bolivia','Canada','Denmark','Ethiopia','Finland','Germany','Hungary','Ireland','Japan','Kenya'
+    // ];
+    // for(i=10; i >=0 ; i--){
+    //     console.log(countriess[i]);
+    // }
+
+    //  // #### using while loop ####
+
+    // let b = 10 ;
+    // while(b >= 0){
+    //     console.log(countriess[b]);
+    //     b--;
+    // }
+
+    //  // #### using do-while loop ####
+
+    // let c = 10;
+    // do{
+    //     console.log(countriess[c]);
+    //     c--;
+    // }while(c > 0)
+
+
+    // //   // ******************  Ques 3 ******************
+    // n=1000
+    // for (let index = 0; index < 1001; index++) {
+    //   console.log(index);
+
+    // }
+
+
+    // //   // ******************  Ques 4  ******************
+
+    // // for( x = 1; x < 7 ; x++){
+    // //     let str = '#'
+    // //     console.log(str.repeat(x));
+    // // }
+
+
+    // //   // ******************  Ques 5  ******************
+
+    // // //   for( let n = 0; n < 11; n++){
+    // // //     console.log(`${n} x ${n} = ${n*n}`)
+    // // //   }
+
+
+    // // //   // ******************  Ques 6  ******************
+    // // console.log('i i^2 i^3');
+    // //   for(y = 0; y < 11; y++){
+    // //     console.log(` ${y} ${y*y} ${y**3}`)
+    // //   }
+
+
+    // // //   // ******************  Ques 7  ******************
+
+    // // //   for(
+    // // //     let e = 0; e < 101; e += 2
+    // // //   ){
+    // // //     console.log(e)
+    // // //   }
+
+
+    // //   // ******************  Ques 8  ******************
+
+    // // // //   for(
+    // // // //     let e = 1; e < 101; e += 2
+    // // // //   ){
+    // // // //     console.log(e)
+    // // //   }
+
+
+    // //   // ******************  Ques 9  ******************
+
+    // //   // for( n = 1, z= 1; n < 101, z < 101; n++, z++) {
+
+    // //   //  if((n % z == 0) && ((z == n) && (z < n))){
+    // //   //   console.log(n)
+    // //   //  }
+
+    // //   // }
+
+
+
+    // //   // ******************  Ques 10  ******************
+
+
+    // // let sum = 0;
+    // //   for(s = 1 ; s < 101 ; s++){
+    // //     sum = sum +  s;
+
+    // //   }
+    // //   console.log('sum of all numbers from 0 to 100 is ',sum);
+
+    // //   // ******************  Ques 11  ******************
+
+    // // let add = 0;
+    // // for(s = 0; s < 101 ; s += 2){
+    // //   add = add + s;
+
+    // //   if( s == 101){
+    // //     break
+    // //   }
+    // // }
+
+    // // let adds = 0;
+    // // for(o = 1; o < 101 ; o += 2){
+    // //   adds = adds + o;
+
+    // //   if( o == 101){
+    // //     break
+    // //   }
+    // // }
+    // // console.log('sum of all odd numbers from 0 to 100 is ' ,adds); 
+    // // console.log('sum of all even numbers from 0 to 100 is ' ,add); 
+
+
+    // //   // ******************  Ques 12  ******************
+
+    // // let arr =[];
+    // // arr.push(add,adds);
+    // // console.log(arr);
+
+    // // // ******************  Ques 13 ******************
+
+    // // let random = [];
+    // // for(i = 0; i < 5; i++){
+    // //   let t = Math.floor(Math.random() * 10)
+    // //   random.push(t);
+
+    // // }  console.log(random);
+
+
+    // //   // ******************  Ques 14 ******************
+
+    // //   let array = [];
+
+
+    // //     while(array.length < 5){
+    // //       let p = (Math.floor(Math.random()*10));
+    // //       if(array.indexOf(p) == -1) 
+    // //       array.push(p);
+    // //     } console.log(array);
+
+    // //     // ******************  Ques 15 ******************
+
+    // //     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+
+    // //        let randoms = '';
+    // //         for (let i = 0; i < 5; i++) {
+    // //             let id = str[Math.floor(Math.random()*str.length)] ;
+    // //             randoms += id;
+
+    // // //     } console.log(randoms);
+
+
+    // //     // ###############  Exercise : level 2  ###############
+
+    // //     // ******************  Ques 1 ******************
+
+    // //     let string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+    // //     let username = '';
+    // //     while(username.length = Math.floor(Math.random()*20)){
+    // //       let p = string[(Math.floor(Math.random()*string.length))];
+    // //      username += p;
+    // //      if(username.length == 20){
+    // //       break
+    // //      }
+
+    // //     } console.log(username);
+
+
+    // //     // ******************  Ques 2 ******************
+
+
+    // //     let str = "ABCDEFabcdef1234567890";
+
+    // //        let randoms = '';
+    // //         for (let i = 0; i < 5; i++) {
+    // //             let id = str[Math.floor(Math.random()*str.length)] ;
+    // //             randoms += id;
+
+    // //     } console.log(`'#${randoms}'`);
+
+
+
+    // //     // ******************  Ques 3 ******************
+
+    // //        let color1 = '';
+    // //        let color2 = '';
+    // //        let color3 = '';
+
+
+    // //         for (let i = 0; i < 1; i++) {
+    // //             let code = Math.floor(Math.random()*100) ;
+    // //             let code1 = Math.floor(Math.random()*100) ;
+    // //             let code2 = Math.floor(Math.random()*100) ;
+    // //             color1 += code ;
+    // //             color2 += code1 ;
+    // //             color3 += code2 ;
+
+
+    // //     } console.log(`rgb(${color1},${color2},${color3})`);
+
+    // // ******************  Ques 4 ******************
+
+    // countries = [
+    //   'Albania', 'Bolivia', 'Canada', 'Denmark', 'Ethiopia', 'Finland', 'Germany', 'Hungary', 'Ireland', 'Japan', 'Kenya'
+    // ]
+
+
+    // let newarray = [];
+    // for (let country of countries) {
+    //   let up = country.toUpperCase()
+    //   newarray.push(up)
+
+    // } console.log(newarray)
+
+    // // ******************  Ques 5 ******************
+
+    // // let length = [];
+    // // for(country of countries){
+    // //   let l = country.length ;
+    // //   length.push(l)
+
+    // // }console.log(length)
+
+
+    // // // ******************  Ques 6 ******************
+
+
+
+    // let childarr = [];
+    // let lengtharr = [];
+    // let comp_arr = [];
+    // let cap = [];
+    // let grandarr = [];
+    // countries.forEach((country, index) => {
+    //   let three = country.slice(0, 3).toUpperCase()
+    //   childarr.push(three)
+    //   let length = country.length
+    //   lengtharr.push(length)
+    //   let upper = country.toUpperCase();
+    //   cap.push(upper);
+
+    //   comp_arr.push(cap[index], childarr[index], lengtharr[index]);
+
+
+    //   comp_arr.forEach((arra, i) => {
+    //     grandarr.push(comp_arr[i]);
+    //   })
+
+
+    // });
+
+    // // console.log(grandarr);
+    // console.log(comp_arr);
+
+    // console.log(childarr);
+    // console.log(lengtharr);
+
+    // // ******************  Ques 7 ******************
+
+    countries = [
+      'Albania', 'Bolivia', 'Canada', 'Denmark', 'Ethiopia', 'Finland', 'Germany', 'Hungary', 'Ireland', 'Japan', 'Kenya'
+    ]
+    let land = [];
+    for (i = 0; i < countries.length; i++) {
+      let country = countries[i];
+      if (country.includes('land')) {
+        land.push(country);
+
+      }
+    } console.log(land);
+
+    // ******************  Ques 8 ******************
+
+    // let ia = [];
+    // for(i=0; i < countries.length; i++){
+    //   let country = countries[i];
+    //   if(country.endsWith('ia')){
+    //     let push = ia.push(country);
+
+    //   }
+    // }console.log(ia);
+
+
+    // ******************  Ques 9 ******************
+
+    // let  ethiopia = countries[0];
+    // for(i=0; i < countries.length; i++){
+
+    //   if(ethiopia.length < countries[i].length){
+    //    ethiopia = countries[i]
+
+    //   }
+    // }console.log(ethiopia);
+
+    // ******************  Ques 10 ******************
+    // let araaa = [];
+
+    //     for(i=0; i < countries.length; i++){
+    //       five = countries[i]
+    //       if(five.length == 5){
+
+    //         araaa.push(five);
+    //       }
+    //     }console.log(araaa);
+
+    // ^^^^^^^^^^^^^^^^^^^^^^ ALTERNATIVE METHOD ^^^^^^^^^^^^^^^^^^^^^^
+
+
+    // let temp = [];
+    // countries.forEach((country,i) => {
+    //   if(country.length == 5){
+    //     temp.push(country);
+    //   }
+    // });
+    // console.log(temp)
+
+    // ******************  Ques 11 ******************
+
+    const webTechs = ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node', 'MongoDB'
+    ];
+
+    let company = webTechs[0];
+    for (i = 0; i < webTechs.length; i++) {
+
+      if (company.length < webTechs[i].length) {
+        company = webTechs[i]
+
+      }
+    } console.log(company);
+
+    // ******************  Ques 12 ******************
+
+
+    //      let cap_lang =[];
+    //      webTechs.forEach((lang,num) =>{
+    //       lang.toUpperCase()
+    //       cap_lang.push(lang.toUpperCase());
+
+
+    //       cap_lang.forEach((language,nums) => {
+    //         let languagearr = [];
+    // languagearr.push(cap_lang[nums]);
+    //       });console.log(languagearr);
+
+
+    //      });
+    //      console.log(cap_lang);
+
+    // ******************  Ques 13 ******************
+
+    let mern = ['mernstack'];
+    for (i = 0; i < 1; i++) {
+      mers = mern[i].slice(0, 4);
+      upmers = mers.toUpperCase();
+    }
+    console.log(upmers);
+
+    // *
+    //  *****************  Ques 14 ******************
+
+    for (let items of webTechs) {
+      console.log(items)
+    };
+
+    // ******************  Ques 15 ******************
+    let newitems = [];
+    let fruits = ['banana', 'orange', 'mango', 'lemon'];
+
+    for (list = 3; list <= fruits.length; list--) {
+      item = fruits[list];
+      newitems.push(item);
+      if (list < 0) {
+        break
+      }
+
+    };
+    console.log(newitems);
+
+    // ******************  Ques 16 ******************
+
+    const fullStack = [['HTML', 'CSS', 'JS', 'React'], ['Node', 'Express', 'MongoDB']];
+
+    let first = fullStack[0];
+    let second = fullStack[1];
+
+    for (i = 0; i < first.length; i++) {
+      skill = first[i];
+      skills = skill.toUpperCase();
+
+     
+    };
+    console.log(skills);
+
+      // ###############  Exercise : level 3  ###############
+
+          // ******************  Ques 1 ******************
+
+//           countries = [
+//       'Albania', 'Bolivia', 'Canada', 'Denmark', 'Ethiopia', 'Finland', 'Germany', 'Hungary', 'Ireland', 'Japan', 'Kenya'
+//     ]
+//     let copy = countries.slice(0,countries.length);
+//     console.log(copy);
+
+//     // ******************  Ques 2 ******************
+
+//     let sortedcountries = copy.sort();
+//     console.log(sortedcountries);
+
+//     // ******************  Ques 3 ******************
+
+    
+//     const mernStack = ['MongoDB', 'Express', 'React', 'Node']
+//     let sortedW = webTechs.sort();
+//     let sortedM = mernStack.sort();
+
+//     console.log(sortedW);
+//     console.log( sortedM);
+
+//     // ******************  Ques 4 ******************
+
+//     const countriesss = ['Afghanistan','Albania','Algeria','Andorra','Angola','Antigua and Barbuda','Argentina','Armenia','Australia','Austria','Azerbaijan','Bahamas','Bahrain','Bangladesh','Barbados','Belarus','Belgium','Belize','Benin','Bhutan','Bolivia','Bosnia and Herzegovina',
+//   'Botswana',
+//   'Brazil',
+//   'Brunei',
+//   'Bulgaria',
+//   'Burkina Faso',
+//   'Burundi',
+//   'Cambodia',
+//   'Cameroon',
+//   'Canada',
+//   'Cape Verde',
+//   'Central African Republic',
+//   'Chad',
+//   'Chile',
+//   'China',
+//   'Colombi',
+//   'Comoros',
+//   'Congo (Brazzaville)',
+//   'Congo',
+//   'Costa Rica',
+//   "Cote d'Ivoire",
+//   'Croatia',
+//   'Cuba',
+//   'Cyprus',
+//   'Czech Republic',
+//   'Denmark',
+//   'Djibouti',
+//   'Dominica',
+//   'Dominican Republic',
+//   'East Timor (Timor Timur)',
+//   'Ecuador',
+//   'Egypt',
+//   'El Salvador',
+//   'Equatorial Guinea',
+//   'Eritrea',
+//   'Estonia',
+//   'Ethiopia',
+//   'Fiji',
+//   'Finland',
+//   'France',
+//   'Gabon',
+//   'Gambia, The',
+//   'Georgia',
+//   'Germany',
+//   'Ghana',
+//   'Greece',
+//   'Grenada',
+//   'Guatemala',
+//   'Guinea',
+//   'Guinea-Bissau',
+//   'Guyana',
+//   'Haiti',
+//   'Honduras',
+//   'Hungary',
+//   'Iceland',
+//   'India',
+//   'Indonesia',
+//   'Iran',
+//   'Iraq',
+//   'Ireland',
+//   'Israel',
+//   'Italy',
+//   'Jamaica',
+//   'Japan',
+//   'Jordan',
+//   'Kazakhstan',
+//   'Kenya',
+//   'Kiribati',
+//   'Korea, North',
+//   'Korea, South',
+//   'Kuwait',
+//   'Kyrgyzstan',
+//   'Laos',
+//   'Latvia',
+//   'Lebanon',
+//   'Lesotho',
+//   'Liberia',
+//   'Libya',
+//   'Liechtenstein',
+//   'Lithuania',
+//   'Luxembourg',
+//   'Macedonia',
+//   'Madagascar',
+//   'Malawi',
+//   'Malaysia',
+//   'Maldives',
+//   'Mali',
+//   'Malta',
+//   'Marshall Islands',
+// 'Mauritania','Mauritius','Mexico','Micronesia','Moldova','Monaco','Mongolia','Morocco','Mozambique','Myanmar','Namibia','Netherlands','New Zealand','Nicaragua','Niger','Nigeria','Norway','Oman',
+// 'Pakistan','Palau','Panama','Papua New Guinea','Paraguay','Peru','Philippines','Poland','Portugal','Qatar','Romania','Russia','Rwanda','Saint Kitts and Nevis','Saint Lucia','Saint Vincent','Samoa','San Marino','Sao Tome and Principe','Saudi Arabia','Senegal','Serbia and Montenegro','Seychelles','Sierra Leone','Singapore','Slovakia','Slovenia','Solomon Islands','Somalia','South Africa','Spain','Sri Lanka','Sudan','Suriname','Swaziland','Sweden','Switzerland','Syria','Taiwan','Tajikistan','Tanzania','Thailand','Togo','Tonga','Trinidad and Tobago','Tunisia','Turkey','Turkmenistan','Tuvalu','Uganda','Ukraine','United Arab Emirates','United Kingdom','United States','Uruguay','Uzbekistan','Vanuatu','Vatican City','Venezuela','Vietnam','Yemen','Zambia','Zimbabwe'
+// ];
+
+
+// let nextarr = [];
+// for(i=0;i<countriesss.length;i++ ){
+//   let land = countriesss[i];
+//   if(land.includes('land')){
+//     nextarr.push(land);
+//   }
+// };
+// console.log(nextarr);
+    
+// // ******************  Ques 5 ******************
+
+// let max = countriesss[0];
+// countriesss.forEach((countr,numbers) =>{
+// if(max.length < countr.length){
+//   max = countr
+// }
+// })
+// console.log(max);
+
+// // ******************  Ques 6 ******************
+
+// // same as ques 4 
+
+// // ******************  Ques 7 ******************
+
+// let fourarr = [];
+// countriesss.forEach((count,numbers) => {
+//   if(count.length == 4){
+//      fourarr.push(count);
+//   }
+// });
+// console.log(fourarr);
+
+// // ******************  Ques 8 ******************
+
+
+// let twoarr = [];
+// countriesss.forEach((count,numbers) => {
+//   if(count.length >= 4){
+//      twoarr.push(count);
+//   }
+// });
+// console.log(twoarr);
+
+// // ******************  Ques 9 ******************
+
+// let reverse = countriesss.reverse();
+// console.log(reverse);
+
+// let demand = [];
+// countriesss.forEach((rev,revn) => {
+//   let uprev = countriesss[revn].toUpperCase();
+//   demand.push(uprev);
+  
+// });
+// console.log(demand);
+
+
+    
+
+
+
+  </script>
+
+</body>
+
+</html>

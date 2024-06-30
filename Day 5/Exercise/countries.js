@@ -1,0 +1,1 @@
+const countries = ['Finland', 'India', 'Nepal', 'China'];

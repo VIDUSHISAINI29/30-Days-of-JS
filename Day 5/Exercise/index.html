@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex-5</title>
+</head>
+<body>
+<script src="./countries.js"></script>
+<script src="./webTechs.js"></script>
+    <script src="./main.js"></script>
+ 
+
+    <script>
+//  Exercise : level 1
+
+// Ques 1
+
+let empty = Array();
+
+// Ques 2
+
+let fruits = [ "apple" , "mango" , "banana" , "guava" , "grapes"];
+
+// Ques 3
+
+let size = fruits.length;
+
+console.log(size);
+
+// Ques 4
+
+let first_item = fruits[0];
+let middle_item = fruits[2];
+let last_item = fruits[4];
+console.log (first_item);
+console.log (middle_item);
+console.log (last_item);
+
+// Ques 5
+
+let mixedDataTypes =['vidushi', 19 , [1 , 2 , 3] , "apple" , 40 , true ];
+console.log(mixedDataTypes.length);
+
+// Ques 6
+
+let companies = [ 'Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle' , 'Amazon'];
+
+// Ques 7
+
+console.log(companies);
+
+// Ques 8
+
+console.log(companies.length);
+
+// Ques 9
+
+let first_company = companies[0];
+let middle_company = companies[3];
+let last_company = companies[6];
+console.log (first_company);
+console.log (middle_company);
+console.log (last_company);
+
+// Ques 10
+
+
+
+// QUes 11
+
+companies[0] = companies[0].toUpperCase();
+console.log(companies[0]);
+
+companies[1] = companies[1].toUpperCase();
+console.log(companies[1]);
+
+companies[2] = companies[2].toUpperCase();
+console.log(companies[2]);
+
+companies[3] = companies[3].toUpperCase();
+console.log(companies[3]);
+
+companies[4] = companies[4].toUpperCase();
+console.log(companies[4]);
+
+companies[5] = companies[5].toUpperCase();
+console.log(companies[5]);
+
+companies[6] = companies[6].toUpperCase();
+console.log(companies[6]);
+
+let com = companies.join(' ').toUpperCase();
+console.log(com);
+
+// Ques 12
+
+
+let company = [ 'Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle and Amazon'];
+let join = company.join(", ")
+let add = " are big IT companies"
+console.log(join + add );
+
+// Ques 13 
+
+let index = company.indexOf('Apple');
+if(index == -1){
+    console.log("Apple is not found");
+}
+else{
+    console.log("Apple")
+}
+
+// Ques 14
+
+
+
+
+// Ques 15
+company.sort();
+console.log(company);
+//     
+
+// Ques 16
+
+
+ company.reverse();
+ console.log(company);
+
+//  Ques 17
+
+company = [ 'Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle and Amazon'];
+console.log(company.slice(0,3));
+
+// Ques 18
+
+console.log(company.slice(4,6));
+
+// Ques 19
+
+console.log(company.slice(3,4));
+
+// Ques 20
+
+
+company = [ 'Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle and Amazon'];
+company.shift()
+console.log(`shift: ${company}`);
+
+// Alternative
+
+console.log(company.splice(0,1));
+
+// Ques 21
+
+console.log(company.splice(4,5));
+
+// Ques 22
+
+console.log(company.splice(6,7));
+
+// Ques 23
+
+console.log(company.splice());
+
+// Exercise : level 2
+
+// Ques 2
+
+let text = 'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+let patt = /[\w]+/g;
+ text = text.match(patt);
+
+text = text.slice(' . ');
+
+console.log(text);
+
+// Ques 3
+
+let Cart = ['Milk', 'Coffee', 'Tea', 'Honey'];
+Cart.unshift('Meat');
+Cart.push('Sugar');
+Cart = ['Milk', 'Coffee', 'Tea', 'Honey'];
+Cart.pop()
+console.log(Cart.indexOf('Tea'))
+Cart[2] = 'Greentea';
+console.log(Cart);
+
+// ************************ Ques 4 **********************************
+
+let countriess = ['India', 'Indonsia', 'Iran'];
+let ind = countriess.indexOf('Ethiopia');
+if(ind == -1){countriess.push('Ethiopia')
+    console.log(countriess)
+}
+else{
+    console.log("ETHIOPIA");
+}
+
+// Ques 5
+
+let webtech = ['Google', 'Microsoft', 'Intel',];
+let indic = webtech.indexOf('Sass');
+if(indic == -1){webtech.push('Sass')
+    console.log(webtech)
+}
+else{
+    console.log("Sass");
+}
+
+// Ques 6
+
+const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+const backEnd = ['Node','Express', 'MongoDB']
+
+const full = frontEnd.concat(backEnd);
+console.log(full);
+
+// Exercise : level 3
+
+// Ques 1 
+
+// (i)
+
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+ages.sort();
+console.log(ages);
+
+console.log(ages[ages.length - 1]);
+console.log(ages[0]);
+
+// (ii)
+
+// if((age.length % 2) = 0){console.log(ages[((ages.lenght/2) + ((ages.length/2) + 1))/2])
+
+// }else{console.log((ages.length + 1)/2)
+
+// }
+let result = ages[5] + ages[6];
+console.log(result/2);
+
+// (iii)
+
+let addition = ages[0] + ages[1] + ages[2] + ages[3] + ages[4] + ages[5] + ages[6] + ages[7] +  ages[8] + ages[9] ;
+console.log(addition/10);
+
+// (iv)
+
+let max = ages[ages.length - 1] ;
+let min = ages[0];
+let ranges = max - min ;
+console.log(ranges);
+
+// (v)
+
+
+// Ques 2
+
+const countriesss = ['Afghanistan','Albania','Algeria','Andorra','Angola','Antigua and Barbuda','Argentina','Armenia','Australia','Austria','Azerbaijan','Bahamas','Bahrain','Bangladesh','Barbados','Belarus','Belgium','Belize','Benin','Bhutan','Bolivia','Bosnia and Herzegovina',
+  'Botswana',
+  'Brazil',
+  'Brunei',
+  'Bulgaria',
+  'Burkina Faso',
+  'Burundi',
+  'Cambodia',
+  'Cameroon',
+  'Canada',
+  'Cape Verde',
+  'Central African Republic',
+  'Chad',
+  'Chile',
+  'China',
+  'Colombi',
+  'Comoros',
+  'Congo (Brazzaville)',
+  'Congo',
+  'Costa Rica',
+  "Cote d'Ivoire",
+  'Croatia',
+  'Cuba',
+  'Cyprus',
+  'Czech Republic',
+  'Denmark',
+  'Djibouti',
+  'Dominica',
+  'Dominican Republic',
+  'East Timor (Timor Timur)',
+  'Ecuador',
+  'Egypt',
+  'El Salvador',
+  'Equatorial Guinea',
+  'Eritrea',
+  'Estonia',
+  'Ethiopia',
+  'Fiji',
+  'Finland',
+  'France',
+  'Gabon',
+  'Gambia, The',
+  'Georgia',
+  'Germany',
+  'Ghana',
+  'Greece',
+  'Grenada',
+  'Guatemala',
+  'Guinea',
+  'Guinea-Bissau',
+  'Guyana',
+  'Haiti',
+  'Honduras',
+  'Hungary',
+  'Iceland',
+  'India',
+  'Indonesia',
+  'Iran',
+  'Iraq',
+  'Ireland',
+  'Israel',
+  'Italy',
+  'Jamaica',
+  'Japan',
+  'Jordan',
+  'Kazakhstan',
+  'Kenya',
+  'Kiribati',
+  'Korea, North',
+  'Korea, South',
+  'Kuwait',
+  'Kyrgyzstan',
+  'Laos',
+  'Latvia',
+  'Lebanon',
+  'Lesotho',
+  'Liberia',
+  'Libya',
+  'Liechtenstein',
+  'Lithuania',
+  'Luxembourg',
+  'Macedonia',
+  'Madagascar',
+  'Malawi',
+  'Malaysia',
+  'Maldives',
+  'Mali',
+  'Malta',
+  'Marshall Islands',
+'Mauritania','Mauritius','Mexico','Micronesia','Moldova','Monaco','Mongolia','Morocco','Mozambique','Myanmar','Namibia','Netherlands','New Zealand','Nicaragua','Niger','Nigeria','Norway','Oman',
+'Pakistan','Palau','Panama','Papua New Guinea','Paraguay','Peru','Philippines','Poland','Portugal','Qatar','Romania','Russia','Rwanda','Saint Kitts and Nevis','Saint Lucia','Saint Vincent','Samoa','San Marino','Sao Tome and Principe','Saudi Arabia','Senegal','Serbia and Montenegro','Seychelles','Sierra Leone','Singapore','Slovakia','Slovenia','Solomon Islands','Somalia','South Africa','Spain','Sri Lanka','Sudan','Suriname','Swaziland','Sweden','Switzerland','Syria','Taiwan','Tajikistan','Tanzania','Thailand','Togo','Tonga','Trinidad and Tobago','Tunisia','Turkey','Turkmenistan','Tuvalu','Uganda','Ukraine','United Arab Emirates','United Kingdom','United States','Uruguay','Uzbekistan','Vanuatu','Vatican City','Venezuela','Vietnam','Yemen','Zambia','Zimbabwe'
+]
+console.log(countriesss.length);
+let med = (countriesss.length + 1)/2;
+console.log(countriesss[med])
+
+// Ques 3
+
+let even = countriesss.length + 1
+if(countriesss.length % 2 == 0){
+    console.log(countriesss.slice(0,even));
+    console.log(countriesss.slice(even,countriesss.length ));
+}
+else{
+    console.log(countriesss.slice(0,med + 1))  
+    console.log(countriesss.slice(med, countriesss.length)); 
+}
+
+
+    </script>
+    
+</body>
+</html>

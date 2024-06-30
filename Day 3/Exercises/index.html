@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex-3</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // Exercise :level 1
+
+        // Ques 1
+
+let firstname = 'Vidushi ';
+let lastname = 'Saini';
+let country = 'India';
+let age = 19;
+let isMarried = false;
+let year = 2024;
+
+console.log(typeof firstname);
+console.log(typeof lastname);
+console.log(typeof country);
+console.log(typeof age);
+console.log(typeof isMarried);
+console.log(typeof year);
+
+// Ques 2 
+
+let number = '10';
+let numb = 10 ;
+
+    console.log((typeof number) === ( numb))
+
+// Ques 3
+
+let nine = parseInt('9.8');
+let num = 10 ;
+console.log((nine)===(num));
+
+// Ques 4 (i)
+
+console.log("vids" === "vids");
+console.log("1000" ==="1000");
+console.log(typeof country === typeof lastname);
+
+
+// Ques 4 (ii)
+
+console.log((" ") === (""))
+console.log(("2024") === (2024))
+console.log((typeof "vids") === (typeof null))
+
+// Ques 5
+
+console.log(4 > 3);
+console.log(4 >= 3);
+console.log(4 < 3);
+console.log(4 <= 3);
+console.log(4 == 4);
+console.log(4 === 4);
+console.log(4 != 4);
+console.log(4 !== 4);
+console.log(4 !== "4");
+console.log(4 == "4");
+console.log(4 === "4");
+
+let py = "python";
+let jg = "jagron";
+console.log(py.length);
+console.log(jg.length);
+console.log(py.length > jg.length);
+
+// Ques 6 (i)
+
+console.log(4 > 3 && 10 < 12);
+console.log(4 > 3 && 10 > 12);
+console.log(4 > 3 || 10 < 12);
+console.log(4 > 3 || 10 > 12);
+console.log(!(4 > 3));
+console.log(!(4 < 3));
+console.log(!(false));
+console.log(!(4 > 3 && 10 < 12));
+console.log(!(4 > 3 && 10 > 12));
+console.log(!(4 === '4'));
+
+
+let isInBoth = py.includes('on') & jg.includes('on');
+console.log(isInBoth);
+
+// Ques 7 
+
+
+let saal = new Date();
+console.log(saal.getFullYear());
+
+let month = new Date();
+console.log(month.getMonth());
+
+let date = new Date();
+console.log(date.getDate());
+
+let day = new Date();
+console.log(day.getDay());
+
+let hour = new Date();
+console.log(hour.getHours());
+
+let mint = new Date();
+console.log(mint.getMinutes());
+
+let sec = new Date();
+console.log(sec.getSeconds());
+
+let seconds = Date.now();
+console.log(seconds);
+
+
+// Exercise : level 2
+
+// Ques 1
+
+
+// let base = prompt('Enter base');
+// let height = prompt('Enter height');
+// let areaoftriangle = 0.5*parseInt(base)*parseInt(height);
+
+// console.log(areaoftriangle);
+
+
+// // Ques 2
+
+// let sideA = prompt('sideA');
+// let sideB = prompt('sideB');
+// let sideC = prompt('sideC');
+// let perimeter = parseInt(sideA)+parseInt(sideB)+parseInt(sideC);
+
+// console.log(perimeter);
+
+// // Ques 3
+
+// let length = prompt('Enter length');
+// let width = prompt('Enter width');
+// let areaofrect = parseInt(length)*parseInt(width);
+// console.log(areaofrect);
+
+  
+// Ques 4
+
+// let radius  = prompt('Enter radius');
+// const pi = 3.14;
+// let areaofcircle = pi*parseInt(radius)*parseInt(radius);
+// console.log(areaofcircle);
+
+// // Ques 5
+
+// let x = prompt('Enter x');
+// let y = prompt('Enter y');
+// let slope = parseInt(y)/parseInt(x);
+// if (y = 2*x - 2){
+//     console.log(slope);
+//     console.log(x);
+//     console.log(y);
+// }
+
+// Alternate 
+
+let eqn = "y = 2x-2";
+let xit = 1;
+let yit = -2;
+let slopes = 2;
+console.log(xit);
+console.log(yit);
+console.log(slopes);
+
+// Ques 6
+
+let Y = 10 - 8;
+let X = 6 - 2;
+let slp = Y/X;
+console.log(slp);
+console.log(typeof slp);    
+
+// Ques 7
+  
+console.log(slopes > slp);
+
+// Ques 8
+
+// let x = prompt('Enter x');
+//  let y = parseInt(x*x + 6*x + 9); 
+// if (y===0){
+// console.log("y is zero");}
+//   else  {console.log("y is not zero");}
+
+//   Ques 9
+
+// let Enter_hour = prompt('Enter_hour');
+// let rate_per_hour = prompt('rate_per_hour');
+// let total_earning = parseInt(Enter_hour) * parseInt(rate_per_hour);
+// console.log(total_earning);
+
+// // Ques 10
+
+let yourname = "dfhahjhfdh";
+if(yourname.length > 7){
+    console.log("Your name is long");
+}else{
+    console.log("Your name is short");
+}
+
+// Ques 11
+
+
+let istname = "Vidushi";
+let secname = "Saini";
+if(istname > secname){
+    console.log("your istname, Vidushi is longer than your secname, Saini")
+}
+
+// QUes 12
+
+let myAge = 200;
+let yourAge = 30;
+let r = myAge - yourAge;
+console.log(`I am ${r} years older than you.`);
+
+// Ques 13
+
+// let Enter_birth_year = prompt('Enter_birth_year');
+// let eligibility = 2006;
+// let diff = parseInt(Enter_birth_year - eligibility);
+// if(Enter_birth_year <= eligibility){
+//     console.log(`You are ${Enter_birth_year}. You are old enough to drive`)
+// } else {
+//     console.log(`You are ${Enter_birth_year}.You will be allowed to drive after ${diff} years.`)
+// }
+
+// qUES 14
+
+// let Enter_year = prompt("Enter_year");
+// let left =  parseInt(Enter_year)*60;
+// if(Enter_year >=1924){
+// console.log(`You lived ${left} seconds.`)}
+
+// Ques 15
+
+
+let now = new Date();
+const years = (now.getFullYear());
+const months = (now.getMonth());
+const dates = (now.getDate());
+const hours = (now.getHours());
+const minutes = (now.getMinutes());
+
+console.log(`${years}-${months}-${dates} ${hours}:${minutes}`)
+
+console.log(`${dates}-${months}-${years} ${hours}:${minutes}`)
+
+console.log(`${dates}/${months}/${years} ${hours}:${minutes}`)
+
+console.log(months.length);
+ 
+// Exercise : level 3
+
+// Ques 1
+
+if(months < 10){
+console.log(`${years}-0${months}-${dates} ${hours}:${minutes}`)}
+else
+{console.log(`${years}-${months}-${dates} ${hours}:${minutes}`)}
+
+
+  </script>
+</body>
+</html>

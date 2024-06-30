@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ Exercise: level 1 ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
+
+        // ** ** ** ** ** ** ** ** Ques 1 ** ** ** ** ** ** ** ** **
+
+        function fullname() {
+            let firstname = "Vidushi";
+            let lastname = "Saini";
+            let space = " ";
+            let completename = firstname + space + lastname;
+            console.log(completename);
+        }
+        fullname();
+
+        // ** ** ** ** ** ** ** ** Ques 2 ** ** ** ** ** ** ** ** **
+
+        function myfullname(firstname, lastname) {
+            let name = `${firstname} ${lastname}`;
+            return name;
+        }
+        let names = myfullname("Vidushi", "Saini");
+        console.log(names);
+
+        // ** ** ** ** ** ** ** ** Ques 3 ** ** ** ** ** ** ** ** **
+
+        function addition(x, y) {
+            let sum = x + y;
+            return sum;
+        }
+        console.log(addition(3, 25));
+
+        // ** ** ** ** ** ** ** ** Ques 4 ** ** ** ** ** ** ** ** **
+
+        function areaOfReactangle(l, b) {
+            let area = l * b;
+            return area;
+        }
+        console.log(areaOfReactangle(23, 34));
+
+        // ** ** ** ** ** ** ** ** Ques 5 ** ** ** ** ** ** ** ** **
+
+        function perimeteRectangle(l, b) {
+            let perimeter = 2 * (l + b);
+            return perimeter;
+        }
+        console.log(perimeteRectangle(16, 9));
+
+        // ** ** ** ** ** ** ** ** Ques 6 ** ** ** ** ** ** ** ** **
+
+        function volPrism(l, b, h) {
+            let vol = l * b * h;
+            return vol;
+        }
+        console.log(volPrism(10, 5, 7));
+
+        // ** ** ** ** ** ** ** ** Ques 7 ** ** ** ** ** ** ** ** **
+
+        function circleArea(r) {
+            const PI = 22 / 7;
+            let area = PI * r * r;
+            return area;
+        }
+        console.log(circleArea(13));
+
+        // ** ** ** ** ** ** ** ** Ques 8 ** ** ** ** ** ** ** ** **
+
+        function circumference(r) {
+            const PI = 22 / 7;
+            let circum = 2 * PI * r;
+            return circum;
+        }
+        console.log(circumference(7));
+
+        // ** ** ** ** ** ** ** ** Ques 9 ** ** ** ** ** ** ** ** **
+
+        function density(m, v) {
+            let d = m / v;
+            return d;
+        }
+        console.log(density(15, 3));
+
+        // ** ** ** ** ** ** ** ** Ques 10 ** ** ** ** ** ** ** ** **
+
+        function speed(d, t) {
+            let speed = d / t;
+            return speed;
+        }
+        console.log(speed(50, 5));
+
+        // ** ** ** ** ** ** ** ** Ques 11 ** ** ** ** ** ** ** ** **
+
+        function weight(m) {
+            const g = 9.8;
+            let weight = m * g;
+            return weight;
+        }
+        console.log(weight(4));
+
+        // ** ** ** ** ** ** ** ** Ques 12 ** ** ** ** ** ** ** ** **
+
+        function fahrenheit(C) {
+            let F = (C * 9) / 5 + 32;
+            return F;
+        }
+        console.log(fahrenheit(34));
+
+        // ** ** ** ** ** ** ** ** Ques 13 ** ** ** ** ** ** ** ** **
+
+        function BMI(w, h) {
+            let bmi = w / (h * h);
+
+            return bmi;
+        }
+
+        const Bmi = BMI(45, 1.49);
+
+        if (Bmi < 18.5) {
+            console.log("The person is underweight");
+        } else if (18.5 < Bmi < 24.9) {
+            console.log("The person is normalweight");
+        } else if (25 < Bmi < 29.9) {
+            ("The person is overweight");
+            console.log("The person is overweight");
+        } else {
+            console.log("The person is obese");
+        }
+
+        // ** ** ** ** ** ** ** ** Ques 14 ** ** ** ** ** ** ** ** **
+
+        function checkSeason(arguments) {
+            if (
+                arguments == "may" ||
+                arguments == "june" ||
+                arguments == "july" ||
+                arguments == "august"
+            ) {
+                var season = "Summer";
+            } else if (
+                arguments == "november" ||
+                arguments == "december" ||
+                arguments == "january"
+            ) {
+                var season = "winter";
+            } else if (
+                arguments == "february" ||
+                arguments == "march" ||
+                arguments == "april"
+            ) {
+                var season = "spring";
+            } else {
+                var season = "autumn";
+            }
+            return season;
+        }
+        console.log(checkSeason("june"));
+
+        // ** ** ** ** ** ** ** ** Ques 15 ** ** ** ** ** ** ** ** **
+
+        function maximum(a, b, c) {
+            if (a > b && a > c) {
+                var ex = a;
+            } else if (b > a && b > c) {
+                var ex = b;
+            } else {
+                var ex = c;
+            }
+            return ex;
+        }
+
+        console.log(maximum(1222, 56, 78));
+
+        // ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ Exercise: level 2 ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
+
+        // ** ** ** ** ** ** ** ** Ques 1 ** ** ** ** ** ** ** ** **
+
+        function equation(x, y) {
+            const a = 3;
+            const b = 2;
+            const c = 3;
+            let eq = a * x + b * y + c;
+            return eq;
+        }
+        console.log(equation(2, 3));
+
+        // ** ** ** ** ** ** ** ** Ques 2 ** ** ** ** ** ** ** ** **
+
+        function quadratic(x, y) {
+            const a = 3;
+            const b = 2;
+            const c = 3;
+            let solve = a * x * x + b * y + c;
+            return solve;
+        }
+        console.log(quadratic(3, 2));
+
+        // ** ** ** ** ** ** ** ** Ques 3 ** ** ** ** ** ** ** ** **
+
+        let num = [1, 2, 3, 4, 5, 6, 7];
+
+        function printArray(array) {
+            for (i = 0; i < array.length; i++) {
+                numi = array[i];
+                console.log(numi);
+            }
+        }
+        console.log(printArray(num));
+
+        // ** ** ** ** ** ** ** ** Ques 4 ** ** ** ** ** ** ** ** **
+
+        function dateTime() {
+            let y = new Date();
+            let year = y.getFullYear();
+            let month = y.getMonth() + 1;
+            let date = y.getDate();
+            let hours = y.getHours();
+            let minutes = y.getMinutes();
+            let seconds = y.getSeconds();
+            date = date < 10 ? `0${date}` : date;
+            month = month < 10 ? `0${month}` : month;
+            hours = hours < 10 ? `0${hours}` : hours;
+            minutes = minutes < 10 ? `0${minutes}` : minutes;
+            seconds = seconds < 10 ? `0${seconds}` : seconds;
+            console.log(date);
+            let time = `${date}/${month}/${year}  ${hours}:${minutes}:${seconds}`;
+            return time;
+            console.log(time);
+        }
+        console.log(dateTime());
+
+        // ** ** ** ** ** ** ** ** Ques 5 ** ** ** ** ** ** ** ** **
+
+        function swapValue(a, b) {
+            let first = a;
+            let second = b;
+            let third = `${second},${first}`;
+            return third;
+        }
+        console.log(swapValue(23, 45));
+
+        // ** ** ** ** ** ** ** ** Ques 6 ** ** ** ** ** ** ** ** **
+
+        let numbers = [1, 3, 5, 7, 9, 11];
+        let name = ["mani", "kanhaiya", "vidushi", "shiva"];
+
+        function reverse(arr) {
+            let array = [];
+            for (i = arr.length - 1; i < arr.length; i--) {
+                let num = arr[i];
+                array.push(num);
+
+                if (i <= 0) {
+                    break;
+                }
+            }
+            return array;
+        }
+        console.log(reverse(name));
+
+        // ** ** ** ** ** ** ** ** Ques 7 ** ** ** ** ** ** ** ** **
+
+        let countries = ["india", "finland", "pakistan", "ethiopia", "indonesia"];
+
+        function capital(country) {
+            let countrys = [];
+            country.forEach((count, i) => {
+                let up = count.toUpperCase();
+                countrys.push(up);
+            });
+            return countrys;
+        }
+        console.log(capital(countries));
+
+        // ** ** ** ** ** ** ** ** Ques 8 ** ** ** ** ** ** ** ** **
+
+        function addItems(item1, item2, item3) {
+            let listItems = [];
+            listItems.push(item1);
+            listItems.push(item2);
+            listItems.push(item3);
+            return listItems;
+        }
+        console.log(addItems("apple", "mango", "banana"));
+
+        // ** ** ** ** ** ** ** ** Ques 9 ** ** ** ** ** ** ** ** **
+
+        let listItems = ["india", "finland", "pakistan", "ethiopia", "indonesia"];
+
+        function removeItems() {
+            listItems.shift();
+            return listItems;
+        }
+        console.log(removeItems());
+
+        // ** ** ** ** ** ** ** ** Ques 10 ** ** ** ** ** ** ** ** **
+
+        function sumNumbers(number) {
+            var sum = 0;
+            for (var i = 1; i <= number; i++) {
+                sum += i;
+            }
+            return sum;
+        }
+        console.log(sumNumbers(100));
+
+        // ** ** ** ** ** ** ** ** Ques 11 ** ** ** ** ** ** ** ** **
+
+        function sumOdd(number) {
+            let odd = 0;
+            for (i = 1; i < number; i += 2) {
+                odd += i;
+                if (i > number) {
+                    break;
+                }
+            }
+            return odd;
+        }
+        console.log(sumOdd(100));
+
+        // ** ** ** ** ** ** ** ** Ques 12 ** ** ** ** ** ** ** ** **
+
+        function sumEven(number) {
+            let even = 0;
+            for (i = 0; i < number; i += 2) {
+                even += i;
+                if (i > number) {
+                    break;
+                }
+            }
+            return even;
+        }
+        console.log(sumEven(100));
+
+        // ** ** ** ** ** ** ** ** Ques 13 ** ** ** ** ** ** ** ** **
+
+        function evenOdds(number) {
+            let even = 0;
+            let odd = 0;
+            for (i = 0; i < number; i += 1) {
+                if (i % 2 == 0) {
+                    even++;
+                }
+                if (i % 2 != 0) {
+                    odd++;
+                }
+                if (i > number) {
+                    break;
+                }
+            }
+            return {
+                even,
+                odd,
+            };
+        }
+        console.log(evenOdds(12));
+
+        // ** ** ** ** ** ** ** ** Ques 14 ** ** ** ** ** ** ** ** **
+
+        function sum() {
+            let sum = 0;
+            for (i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+        console.log(sum(11, 23, 37, 84, 15, 34, 67, 89));
+
+        // ** ** ** ** ** ** ** ** Ques 15 ** ** ** ** ** ** ** ** **
+
+        function ipAddress() {
+            let id1 = Math.floor(Math.random() * 251);
+            let id2 = Math.floor(Math.random() * 251);
+            let id3 = Math.floor(Math.random() * 251);
+            let id4 = Math.floor(Math.random() * 251);
+            let add = `${id1}.${id2}.${id3}.${id4}`;
+            return add;
+        }
+        console.log(ipAddress());
+
+        // ** ** ** ** ** ** ** ** Ques 16 ** ** ** ** ** ** ** ** **
+
+        given = "ABCDEF0987654321";
+
+        function macAddress() {
+            let id1 = given[Math.floor(Math.random() * given.length)];
+            let id2 = given[Math.floor(Math.random() * given.length)];
+            let id3 = given[Math.floor(Math.random() * given.length)];
+            let id4 = given[Math.floor(Math.random() * given.length)];
+            let id5 = given[Math.floor(Math.random() * given.length)];
+            let id6 = given[Math.floor(Math.random() * given.length)];
+            let id7 = given[Math.floor(Math.random() * given.length)];
+            let id8 = given[Math.floor(Math.random() * given.length)];
+            let id9 = given[Math.floor(Math.random() * given.length)];
+            let id10 = given[Math.floor(Math.random() * given.length)];
+            let id11 = given[Math.floor(Math.random() * given.length)];
+            let id12 = given[Math.floor(Math.random() * given.length)];
+
+            let add = `${id1}${id7}:${id2}${id8}:${id3}${id9}:${id4}${id10}:${id5}${id11}`;
+            return add;
+        }
+        console.log(macAddress());
+
+        // ** ** ** ** ** ** ** ** Ques 17 ** ** ** ** ** ** ** ** **
+
+        // function hexa() {
+        //     let char = "ABCDEFabcdef1234567890";
+        //     let hex = "";
+        //     let h = '';
+        //     let any = prompt("how many colors do you want?")
+        //     for (j = 0; j < any; j++) {
+        //         let hex = "";
+
+        //         for (i = 0; i < 6; i++) {
+        //             hex += char[Math.floor(Math.random() * char.length)];
+        //         }
+
+        //         console.log(`#${hex} `);
+        //     }
+
+        // }
+        // hexa()
+
+        // ** ** ** ** ** ** ** ** Ques 18 ** ** ** ** ** ** ** ** **
+
+        // function Id() {
+        //     let char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZghijklmnopqrstuvwxyz1234567890'
+        //     let id = ''
+        //     for (i = 0; i < 7; i++) {
+        //         id += char[Math.floor(Math.random() * char.length)]
+        //     }
+        //     return (`${id}`)
+
+        // }
+        // console.log(Id());
+
+        // ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ Exercise: level 3 ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
+
+        // ** ** ** ** ** ** ** ** Ques 1 ** ** ** ** ** ** ** ** **
+
+        // function Id() {
+        //     let length = prompt("what length of the id you want?")
+        //     let char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZghijklmnopqrstuvwxyz1234567890'
+        //     let Hmi = prompt("how many ids you want?")
+
+        //     for (j = 0; j < Hmi; j++) {
+        //         id = ''
+        //         for (i = 0; i < length; i++) {
+        //             let random = Math.floor(Math.random() * char.length)
+        //             id += char[random];
+        //         }
+        //         console.log(id);
+        //     }
+        // }
+        // Id()
+
+        // ** ** ** ** ** ** ** ** Ques 2 ** ** ** ** ** ** ** ** **
+
+
+        // ** ** ** ** ** ** ** ** Ques 3 ** ** ** ** ** ** ** ** **
+
+        // let char = "abcdef1234567890";
+
+        // let any = prompt("How many colors do you want ?")
+
+        // function arrayOfHexaColors() {
+        //     let colors = [];
+        //     for (j = 0; j < any; j++) {
+        //         let hcolor = '';
+
+        //         for (i = 0; i < 6; i++) {
+        //             hcolor += char[Math.floor(Math.random() * char.length)];
+
+        //         }
+        //         let hexaColor = `#${hcolor}`;
+        //         colors.push(hexaColor);
+
+        //     }
+
+        //     return colors;
+
+
+        // }
+        // console.log(arrayOfHexaColors());
+
+        // ** ** ** ** ** ** ** ** Ques 4 ** ** ** ** ** ** ** ** **
+
+        function arrayOfRgbColors() {
+            let color = [];
+            let rcolor = '';
+            let rcolor2 = '';
+            let rcolor3 = '';
+            let any = prompt("How many colors do you want ?");
+
+            for (i = 1; i < any; i++) {
+
+
+                for (p = 0; p < any; p++) {
+                    rcolor = Math.floor(Math.random() * 256);
+                }
+                for (o = 0; o < any; o++) {
+                    rcolor2 = Math.floor(Math.random() * 256);
+                }
+                for (q = 0; q < any; q++) {
+                    rcolor3 = Math.floor(Math.random() * 256);
+                }
+
+
+                let rgbColor = `rgb(${rcolor},${rcolor2},${rcolor3})`;
+                color.push(rgbColor);
+            }
+            return color;
+        }
+        console.log(arrayOfRgbColors());
+
+
+
+        // // ** ** ** ** ** ** ** ** Ques 5 ** ** ** ** ** ** ** ** **
+
+        // const hex2rgb = (hex) => {
+        //     const r = parseInt(hex.slice(1, 3), 16);
+        //     const g = parseInt(hex.slice(3, 5), 16);
+        //     const b = parseInt(hex.slice(5, 7), 16);
+
+        //     // return {r, g, b}
+        //     return {
+        //         r,
+        //         g,
+        //         b,
+        //     };
+        // };
+
+        // console.log(hex2rgb("#ff33ff"));
+
+        // /*
+        //   {
+        //     "r": 255,
+        //     "g": 51,
+        //     "b": 255
+        //   }
+        //   */
+
+
+
+        // // ** ** ** ** ** ** ** ** Ques 7 ** ** ** ** ** ** ** ** **
+
+
+        // function any(colors, num) {
+        //     let color = [];
+        //     if (colors == hexa) {
+        //         let char = "abcdef1234567890";
+        //         let hcolor = "";
+        //         for (k = 0; k < 6; k++) {
+        //             hcolor += char[Math.floor(Math.random() * char.length)];
+        //         }
+        //         for (i = 1; i < num; i++) {
+        //             let hexaColor = `#${hcolor}`;
+        //             color.push(hexaColor);
+        //         }
+        //     } else if (colors == rgb) {
+        //         let rcolor = "";
+        //         rcolor = Math.floor(Math.random() * 251);
+        //         rcolor2 = Math.floor(Math.random() * 251);
+        //         rcolor3 = Math.floor(Math.random() * 251);
+        //         for (i = 1; i < num; i++) {
+        //             let rgbColor = `rgb(${rcolor},${rcolor2},${rcolor3})`;
+        //             color.push(rgbColor);
+        //         }
+        //     } else {
+        //         console.log("invalid color name");
+        //     }
+        //     return color;
+        // }
+        // console.log(any(hexa, 10));
+
+
+        // // ** ** ** ** ** ** ** ** Ques 8 ** ** ** ** ** ** ** ** **
+
+        let fruits = ['apple', 'mango', 'banana', 'orange', 'papaya', 'strawberry'];
+
+
+        function shuffledarray(g_array) {
+            let shuffle = [];
+            g_array.forEach((element, index) => {
+                do {
+                    let r_index = g_array[Math.floor(Math.random() * g_array.length)];
+                    if (!shuffle.includes(r_index)) {
+                        shuffle.push(r_index)
+                    }
+                }
+                while (shuffle.length != g_array.length)
+            });
+            return shuffle;
+        }
+        console.log(shuffledarray(fruits));
+
+
+        // // ** ** ** ** ** ** ** ** Ques 9 ** ** ** ** ** ** ** ** **
+
+
+        function factorial(x) {
+            let multi = 1;
+            for (i = 1; i <= x; i++) {
+
+                multi *= i;
+            }
+            return multi;
+        }
+        console.log(factorial(10));
+
+
+
+        // // ** ** ** ** ** ** ** ** Ques 10 ** ** ** ** ** ** ** ** **
+
+
+        let z = 'fds'
+
+        function empty(y) {
+            let p = '';
+            if (y.length == 0) {
+                p = 'This is an empty string'
+            } else {
+                p = 'This is not an empty string'
+            }
+            return p;
+        }
+        console.log(empty(z));
+
+
+        // // ** ** ** ** ** ** ** ** Ques 11 ** ** ** ** ** ** ** ** **
+
+
+        function Sum(...args) {
+            let add = 0;
+            for (let elements of args) {
+                add += elements
+            }
+            return add;
+        }
+        console.log(Sum(3, 6, 9, 15, 89, 9));
+
+
+        // // ** ** ** ** ** ** ** ** Ques 12 ** ** ** ** ** ** ** ** **
+
+
+        let digits = [1, 2, 3, 4, 5];
+
+        function sumOfArrayItems(arrs) {
+            let sum = 0;
+            let type = typeof(1);
+            for (let items of arrs) {
+                if (typeof(items) == type) {
+                    sum += items
+                } else {
+                    sum = console.log('array does not contain numbers')
+                }
+            }
+            return sum;
+        }
+        console.log(sumOfArrayItems(digits));
+
+
+        // // ** ** ** ** ** ** ** ** Ques 13 ** ** ** ** ** ** ** ** **
+
+        let sankhya = [1, 2, 3, 4, 5, 6];
+
+        function average(array) {
+            let sum = 0;
+            let avg = 0;
+            let type = typeof(1);
+            for (let items of array) {
+                if (typeof(items) == type) {
+                    sum += items
+                    avg = sum / array.length
+                } else {
+                    avg = console.log('array does not contain numbers')
+                }
+            }
+            return avg;
+        }
+        console.log(average(sankhya));
+
+
+        // // ** ** ** ** ** ** ** ** Ques 14 ** ** ** ** ** ** ** ** **
+        y = [1, 2, 3, 4, 5, 6];
+
+        function modifyArray(list) {
+            let x = ''
+            if (list.length > 5) {
+                list[5] = 'vidushi'
+                x = list;
+            } else {
+                x = console.log('item not found');
+            }
+            return x;
+
+        }
+        console.log(modifyArray(y));
+
+
+        // // ** ** ** ** ** ** ** ** Ques 15 ** ** ** ** ** ** ** ** **
+
+
+        // function isPrime() {
+        //     let number = prompt("Check if your number is prime or not!")
+        //     let rsult = '';
+        //     for (i = 0; i < number; i++) {
+        //         prime = number % i;
+        //         let rsult = ''
+        //         if (prime = 0 && !(i < number) && i == 1) {
+        //             prime = number % i;
+        //             rsult = 'Yes, it is a prime number'
+        //         } else if (prime = 0 && i < number) {
+        //             prime = number % i;
+        //             rsult = 'It is not a prime number';
+        //         } else {
+
+        //             rsult = 'neither prime nor composite'
+        //         }
+        //         return rsult;
+        //     }
+        // }
+        // console.log(isPrime());
+
+
+        // // ** ** ** ** ** ** ** ** Ques 16 ** ** ** ** ** ** ** ** **
+
+        let vegetables = ['tomato', 'potato', 'carrot', 'cabbage', ' peas', 'carrot'];
+
+
+        function isUniques(stack) {
+            let result = '';
+            let random = Math.floor(Math.random() * stack.length)
+            for (i = 0; i < stack.length; i++) {
+                result = '';
+                for (j = 0; j < stack.length; j++) {
+                    if (stack[i] == stack[j] && j != i) {
+                        result = console.log('This array does not contain unique elements');
+                        break;
+                    } else {
+                        result = console.log('This array contains unique element')
+                    }
+
+                }
+
+            }
+            return result;
+        }
+        console.log(isUniques(vegetables));
+
+
+        // // ** ** ** ** ** ** ** ** Ques 16 ** ** ** ** ** ** ** ** **
+
+
+        let Data = ['vids', 2, 3, 4, 5];
+
+
+        function dataType(data) {
+            let output = '';
+            for (let elements of data) {
+                output = typeof(elements);
+            }
+            return output;
+        }
+        console.log(dataType(Data));
+    </script>
+</body>
+
+</html>

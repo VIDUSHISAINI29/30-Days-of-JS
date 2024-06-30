@@ -1,0 +1,1 @@
+const webTechs = ['Facebook', 'Google', 'Amazon', 'Intel'];

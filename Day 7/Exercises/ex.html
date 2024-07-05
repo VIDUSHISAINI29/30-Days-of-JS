@@ -495,33 +495,33 @@
 
         // ** ** ** ** ** ** ** ** Ques 4 ** ** ** ** ** ** ** ** **
 
-        function arrayOfRgbColors() {
-            let color = [];
-            let rcolor = '';
-            let rcolor2 = '';
-            let rcolor3 = '';
-            let any = prompt("How many colors do you want ?");
+        // function arrayOfRgbColors() {
+        //     let color = [];
+        //     let rcolor = '';
+        //     let rcolor2 = '';
+        //     let rcolor3 = '';
+        //     let any = prompt("How many colors do you want ?");
 
-            for (i = 1; i < any; i++) {
-
-
-                for (p = 0; p < any; p++) {
-                    rcolor = Math.floor(Math.random() * 256);
-                }
-                for (o = 0; o < any; o++) {
-                    rcolor2 = Math.floor(Math.random() * 256);
-                }
-                for (q = 0; q < any; q++) {
-                    rcolor3 = Math.floor(Math.random() * 256);
-                }
+        //     for (i = 1; i < any; i++) {
 
 
-                let rgbColor = `rgb(${rcolor},${rcolor2},${rcolor3})`;
-                color.push(rgbColor);
-            }
-            return color;
-        }
-        console.log(arrayOfRgbColors());
+        //         for (p = 0; p < any; p++) {
+        //             rcolor = Math.floor(Math.random() * 256);
+        //         }
+        //         for (o = 0; o < any; o++) {
+        //             rcolor2 = Math.floor(Math.random() * 256);
+        //         }
+        //         for (q = 0; q < any; q++) {
+        //             rcolor3 = Math.floor(Math.random() * 256);
+        //         }
+
+
+        //         let rgbColor = `rgb(${rcolor},${rcolor2},${rcolor3})`;
+        //         color.push(rgbColor);
+        //     }
+        //     return color;
+        // }
+        // console.log(arrayOfRgbColors());
 
 
 
@@ -735,7 +735,7 @@
 
         // // ** ** ** ** ** ** ** ** Ques 16 ** ** ** ** ** ** ** ** **
 
-        let vegetables = ['tomato', 'potato', 'carrot', 'cabbage', ' peas', 'carrot'];
+        let vegetables = ['tomato', 'potato', 'carrot', 'cabbage', ' peas'];
 
 
         function isUniques(stack) {
@@ -745,34 +745,107 @@
                 result = '';
                 for (j = 0; j < stack.length; j++) {
                     if (stack[i] == stack[j] && j != i) {
-                        result = console.log('This array does not contain unique elements');
+                        result = 'This array does not contain unique elements';
                         break;
                     } else {
-                        result = console.log('This array contains unique element')
+                        result = 'This array contains unique element';
                     }
-
                 }
-
             }
             return result;
         }
         console.log(isUniques(vegetables));
 
 
-        // // ** ** ** ** ** ** ** ** Ques 16 ** ** ** ** ** ** ** ** **
+        // // ** ** ** ** ** ** ** ** Ques 17 ** ** ** ** ** ** ** ** **
 
 
-        let Data = ['vids', 2, 3, 4, 5];
-
-
+        let Data = ['vids', '2','8'];
         function dataType(data) {
             let output = '';
+            let refer = typeof data[0];
             for (let elements of data) {
-                output = typeof(elements);
+             output =   data.every(elements => typeof elements === refer);
             }
             return output;
         }
-        console.log(dataType(Data));
+    console.log(dataType(Data));
+
+    // // ** ** ** ** ** ** ** ** Ques 18 ** ** ** ** ** ** ** ** **
+
+        function isValidVarible(x){
+            let outcome = '';
+            let char = /[\w_$]/g;
+            let num = '0987654321';
+           
+            console.log();
+            for(i = 0; i < x.length; i++){
+            if(x[i].match(char)  && !num.includes(x[0])){
+                outcome = 'it is valid';
+            }else{
+                outcome = 'it is not valid';   
+            }
+        }
+            return outcome;
+        }
+        console.log( isValidVarible('0hvhg'));
+
+          // // ** ** ** ** ** ** ** ** Ques 19 ** ** ** ** ** ** ** ** **
+
+
+          function  sevenRandom(){
+           let sevenRandomArray = [];
+           while(sevenRandomArray.length < 7){
+            let random = Math.floor(Math.random()* 10);
+            if(sevenRandomArray.indexOf(random) == -1){
+                sevenRandomArray.push(random);
+            }
+           }
+           return sevenRandomArray;
+          }
+          console.log(sevenRandom());
+
+          
+          // // ** ** ** ** ** ** ** ** Ques 20 ** ** ** ** ** ** ** ** **
+
+
+          
+
+ function reverse(){
+
+
+    const continents_parts = [
+  'Albania',
+  'Bolivia',
+  'Canada',
+  'Denmark',
+  'Ethiopia',
+  'Finland',
+  'Germany',
+  'Hungary',
+  'Ireland',
+  'Japan',
+  'Kenya'
+];
+    let copy = [];
+    let opposite = [];
+ continents_parts .forEach((elements) => {
+    copy.push(elements);
+ });
+ for(i = continents_parts.length-1; i >=0;i-- ){
+let opp = continents_parts[i];
+opposite.push(opp);
+
+ }
+return opposite  ;
+
+ }
+console.log(reverse())
+ 
+
+                                // ####  🤩🤩🤩  ####
+
+
     </script>
 </body>
 

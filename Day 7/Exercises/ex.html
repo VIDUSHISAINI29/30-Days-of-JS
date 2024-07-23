@@ -8,12 +8,12 @@
 </head>
 
 <body>
+
+    <div style="color: rgb(106, 255, 0);"></div>
     <script>
         // ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ Exercise: level 1 ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
 
         // ** ** ** ** ** ** ** ** Ques 1 ** ** ** ** ** ** ** ** **
-
-        console.log('Day 7') 
 
         function fullname() {
             let firstname = "Vidushi";
@@ -466,6 +466,25 @@
 
         // ** ** ** ** ** ** ** ** Ques 2 ** ** ** ** ** ** ** ** **
 
+        function RgbColors() {
+            let rcolor = '';
+            let rcolor2 = '';
+            let rcolor3 = '';
+
+            rcolor = Math.floor(Math.random() * 256);
+
+            rcolor2 = Math.floor(Math.random() * 256);
+
+            rcolor3 = Math.floor(Math.random() * 256);
+
+            let rgbColor = `rgb(${rcolor},${rcolor2},${rcolor3})`;
+
+
+            return rgbColor;
+
+        }
+        console.log(RgbColors());
+
 
         // ** ** ** ** ** ** ** ** Ques 3 ** ** ** ** ** ** ** ** **
 
@@ -555,33 +574,33 @@
         // // ** ** ** ** ** ** ** ** Ques 7 ** ** ** ** ** ** ** ** **
 
 
-        // function any(colors, num) {
-        //     let color = [];
-        //     if (colors == hexa) {
-        //         let char = "abcdef1234567890";
-        //         let hcolor = "";
-        //         for (k = 0; k < 6; k++) {
-        //             hcolor += char[Math.floor(Math.random() * char.length)];
-        //         }
-        //         for (i = 1; i < num; i++) {
-        //             let hexaColor = `#${hcolor}`;
-        //             color.push(hexaColor);
-        //         }
-        //     } else if (colors == rgb) {
-        //         let rcolor = "";
-        //         rcolor = Math.floor(Math.random() * 251);
-        //         rcolor2 = Math.floor(Math.random() * 251);
-        //         rcolor3 = Math.floor(Math.random() * 251);
-        //         for (i = 1; i < num; i++) {
-        //             let rgbColor = `rgb(${rcolor},${rcolor2},${rcolor3})`;
-        //             color.push(rgbColor);
-        //         }
-        //     } else {
-        //         console.log("invalid color name");
-        //     }
-        //     return color;
-        // }
-        // console.log(any(hexa, 10));
+        function any(colors, num) {
+            let color = [];
+            if (colors == 'hexa') {
+                let char = "abcdef1234567890";
+                let hcolor = "";
+                for (k = 0; k < 6; k++) {
+                    hcolor += char[Math.floor(Math.random() * char.length)];
+                }
+                for (i = 1; i < num; i++) {
+                    let hexaColor = `#${hcolor}`;
+                    color.push(hexaColor);
+                }
+            } else if (colors == 'rgb') {
+                let rcolor = "";
+                rcolor = Math.floor(Math.random() * 251);
+                rcolor2 = Math.floor(Math.random() * 251);
+                rcolor3 = Math.floor(Math.random() * 251);
+                for (i = 1; i < num; i++) {
+                    let rgbColor = `rgb(${rcolor},${rcolor2},${rcolor3})`;
+                    color.push(rgbColor);
+                }
+            } else {
+                console.log("invalid color name");
+            }
+            return color;
+        }
+        console.log(any('rgb', 120));
 
 
         // // ** ** ** ** ** ** ** ** Ques 8 ** ** ** ** ** ** ** ** **
@@ -623,7 +642,7 @@
         // // ** ** ** ** ** ** ** ** Ques 10 ** ** ** ** ** ** ** ** **
 
 
-        let z = 'fds'
+        let z = 'ghfvgh'
 
         function empty(y) {
             let p = '';
@@ -653,16 +672,16 @@
         // // ** ** ** ** ** ** ** ** Ques 12 ** ** ** ** ** ** ** ** **
 
 
-        let digits = [1, 2, 3, 4, 5];
+        let digits = [1, 2, 3, '4'];
 
         function sumOfArrayItems(arrs) {
             let sum = 0;
-            let type = typeof(1);
+            let type = typeof (1);
             for (let items of arrs) {
-                if (typeof(items) == type) {
+                if (typeof (items) == type) {
                     sum += items
                 } else {
-                    sum = console.log('array does not contain numbers')
+                    sum = 'array does not contain numbers';
                 }
             }
             return sum;
@@ -672,18 +691,18 @@
 
         // // ** ** ** ** ** ** ** ** Ques 13 ** ** ** ** ** ** ** ** **
 
-        let sankhya = [1, 2, 3, 4, 5, 6];
+        let sankhya = [1, 2, 3, 4, 5, '6'];
 
         function average(array) {
             let sum = 0;
             let avg = 0;
-            let type = typeof(1);
+            let type = typeof (1);
             for (let items of array) {
-                if (typeof(items) == type) {
+                if (typeof (items) == type) {
                     sum += items
                     avg = sum / array.length
                 } else {
-                    avg = console.log('array does not contain numbers')
+                    avg = 'array does not contain numbers';
                 }
             }
             return avg;
@@ -692,7 +711,7 @@
 
 
         // // ** ** ** ** ** ** ** ** Ques 14 ** ** ** ** ** ** ** ** **
-        y = [1, 2, 3, 4, 5, 6];
+        y = [1, 2, 3, 4, 5];
 
         function modifyArray(list) {
             let x = ''
@@ -711,50 +730,40 @@
         // // ** ** ** ** ** ** ** ** Ques 15 ** ** ** ** ** ** ** ** **
 
 
-        // function isPrime() {
-        //     let number = prompt("Check if your number is prime or not!")
-        //     let rsult = '';
-        //     for (i = 0; i < number; i++) {
-        //         prime = number % i;
-        //         let rsult = ''
-        //         if (prime = 0 && !(i < number) && i == 1) {
-        //             prime = number % i;
-        //             rsult = 'Yes, it is a prime number'
-        //         } else if (prime = 0 && i < number) {
-        //             prime = number % i;
-        //             rsult = 'It is not a prime number';
-        //         } else {
-
-        //             rsult = 'neither prime nor composite'
-        //         }
-        //         return rsult;
-        //     }
-        // }
-        // console.log(isPrime());
+        function ifPrime(num){
+		 let result = '';
+		  let button = 1
+		 for(i = 2; i < num/2; i++){
+		
+		 if(num % i == 0){
+		 result = 'Number is not Prime'
+		 button =0
+		 }
+        }
+		 return button;
+		 }
+		console.log(ifPrime(29));
 
 
         // // ** ** ** ** ** ** ** ** Ques 16 ** ** ** ** ** ** ** ** **
 
-        let vegetables = ['tomato', 'potato', 'carrot', 'cabbage', ' peas'];
-
+        let vegetables = ['tomato', 'potato', 'carrot', 'cabbage', ' peas', 'reddish', 'carrot'];
 
         function isUniques(stack) {
             let result = '';
-            let random = Math.floor(Math.random() * stack.length)
-            for (i = 0; i < stack.length; i++) {
-                result = '';
-                for (j = 0; j < stack.length; j++) {
-                    if (stack[i] == stack[j] && j != i) {
-                        result = 'This array does not contain unique elements';
-                        break;
-                    } else {
-                        result = 'This array contains unique element';
-                    }
-                }
-            }
+           let set = new Set(stack)
+           if(stack.length === set.size){
+            result = 'array does contain unique elements.'
+           }else{
+            result = 'array does not contain unique elements'
+           }
             return result;
         }
         console.log(isUniques(vegetables));
+
+
+        // // ** ** ** ** ** ** ** ** Ques 17 ** ** ** ** ** ** ** ** **
+
 
 
         // // ** ** ** ** ** ** ** ** Ques 17 ** ** ** ** ** ** ** ** **
@@ -844,8 +853,6 @@ console.log(reverse())
  
 
                                 // ####  🤩🤩🤩  ####
-
-
     </script>
 </body>
 

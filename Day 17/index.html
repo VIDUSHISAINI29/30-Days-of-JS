@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+</head>
+<body>
+
+    <script>
+
+
+        
+    //	#######  Exercise : LEVEl - 1  #######
+
+
+    //			**** Ques - 1 ****
+
+    localStorage.setItem('city', 'Sahranpur')
+    localStorage.setItem('country', 'India')
+    localStorage.setItem('age', 18)
+    localStorage.setItem('lastName', 'Saini')
+    localStorage.setItem('firstName', 'Vidushi')
+console.log(localStorage);
+    
+
+
+
+  //	#######  Exercise : LEVEl - 2  #######
+
+
+
+      //			**** Ques - 1 ****
+
+
+    
+      let student = {}
+      student.firstName = 'Vidushi'
+      student.lastName = 'Saini'
+      student.age = '18'
+      student.skills = ['reading', 'writing', 'playing']
+      student.country = 'India'
+
+      let json_student = JSON.stringify(student)
+      localStorage.setItem('student',json_student)
+      console.log(localStorage)
+
+
+
+          //	#######  Exercise : LEVEl - 3  #######
+
+
+
+      //			**** Ques - 1 ****
+
+
+      let personAccount = {
+        firstName :  'Dushyant',
+        lastName : 'Pundir',
+        incomes : new Set(),
+        expenses: new Set(),
+
+        addExpenses : function(about, amount){
+          let spend = this.expenses.add({about, amount});
+          return spend;
+        },
+        addIncomes : function(about,amount){
+         let earn = this.incomes.add({about, amount});
+         return earn;
+        },
+        totalExpense : function()
+        {
+          let total = 0;
+          this.expenses.forEach(money => {
+            total += money.amount;
+          })
+          return total;
+        },
+        totalIncome : function(){
+          let total = 0;
+          this.incomes.forEach(money => {
+            total += money.amount;
+          })
+          return total
+        },
+        accountBalance : function(){
+          return this.totalIncome() - this.totalExpense()
+        },
+        accountInfo : function(){
+         
+          return `${this.firstName} ${this.lastName} earns ${this.totalIncome()}. He spent ${this.totalExpense()}. Now he have ${this.accountBalance()} money in his account. `
+        }
+      }
+
+      personAccount.addIncomes('salary', 5000);
+      personAccount.addIncomes('freelance', 8000);
+      personAccount.addExpenses('rent', 2000);
+      personAccount.addIncomes('groceries', 800);
+
+      console.log(personAccount.accountInfo());
+      console.log(personAccount.addIncomes('salary'));
+
+
+      let json_personAccount = JSON.stringify(personAccount.accountInfo()) 
+      let json_personadd = JSON.stringify(personAccount.addIncomes())
+      console.log(json_personadd);
+
+
+    </script>
+    
+</body>
+</html>

@@ -8,18 +8,321 @@
 <body>
     <script>
 
-// ####################### Exercise : Level - 1 #######################
+//#### Exercise : level 1 #### 
 
-        // ********************* Ques 1 *********************
+	       //** Ques - 1 **
+           let dog = {};
 
-        const dog = {};
+// ** Ques - 2 ** 
 
-        // ********************* Ques 1 *********************
+console.log(dog);
 
-        // console.log(dog);
+// ** Ques - 3 **
+
+dog = {
+name : 'Sheero',
+legs : 4,
+color : 'brown',
+age : 4 ,
+bark : function(){
+return (`woof woof`);
+}	
+}
+//** Ques - 4 **
+
+console.log(dog.name);
+console.log(dog.legs);
+console.log(dog.color);
+console.log(dog.age);
+console.log(dog.bark());
 
 
-        console.log('Commit')
+// ** Ques - 5 **
+
+dog.breed =  "German Shefered";
+dog.getDogInfo = function(){
+return (`name : ${this.name}, age :${this.age}, breed :	${this.breed}`)};
+
+console.log(dog.getDogInfo());
+console.log(dog)
+
+
+
+
+  //#### Exercise : level 2 #### 
+
+
+     
+
+const user = {
+Alex: {
+email: 'alex@alex.com',
+skills: ['HTML', 'CSS', 'JavaScript'],
+age: 20,
+isLoggedIn: false,
+points: 30
+},
+Asab: {
+email: 'asab@asab.com',
+skills: ['HTML', 'CSS', 'JavaScript', 'Redux', 'MongoDB', 'Express', 'React', 'Node'],
+age: 25,
+isLoggedIn: false,
+points: 50
+},
+Brook: {
+email: 'daniel@daniel.com',
+skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
+age: 30,
+isLoggedIn: true,
+points: 50
+},
+Daniel: {
+email: 'daniel@alex.com',
+skills: ['HTML', 'CSS', 'JavaScript', 'Python'],
+age: 20,
+isLoggedIn: false,
+points: 40
+},
+John: {
+email: 'john@john.com',
+skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js'],
+age: 20,
+isLoggedIn: true,
+points: 50
+},
+Thomas: {
+email: 'thomas@thomas.com',
+skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+age: 20,
+isLoggedIn: false,
+points: 40
+},
+Paul: {
+email: 'paul@paul.com',
+skills: ['HTML', 'CSS', 'JavaScript', 'MongoDB', 'Express', 'React', 'Node'],
+age: 20,
+isLoggedIn: false,
+points: 40
+}
+}
+
+
+
+// ** Ques - 1**
+
+
+let max = 0;
+for(let members in user){
+let result = (user[members].skills).length;
+if(max < result){
+max = result;
+}
+}
+console.log(max);
+
+
+// ** Ques - 2 **
+
+
+
+          let logIn = 0;
+      let points = 0;
+      for(let players in user){
+          if(user[players].isLoggedIn == true){
+              logIn++
+          }
+          if(user[players].points >= 50){
+            points++
+          }
+      };
+      console.log(logIn);
+      console.log(points);
+      
+      
+     
+// ** Ques - 3 **
+      
+for(i = 0; i < user.length ; i++){
+
+}
+for( let member in user){
+let num = user[member].skills;
+let worker = member ;
+if(num.includes('MongoDB') && num.includes('React') &&  num.includes('Node') && num.includes('Express') ){
+console.log(`${worker} is a MERN stack developer.`);
+}else{
+console.log(`${worker} is not a MERN stack developer.`);
+}
+}
+
+
+// ** Ques - 4 **
+
+user.Vidushi = {
+email: 'vidushi34@gmail.com',
+skills: ['HTML', 'CSS',  'JS'],
+age: 19,
+points: 100
+}
+console.log(user);
+
+// ** Ques - 5 **
+
+let keys = Object.keys(user);
+console.log(keys)
+
+
+// ** Ques - 6 **
+
+let values = Object.values(user)
+
+console.log(values);
+
+// ** Ques - 7 **
+
+let countries = {};
+
+countries.India = {
+capital: 'New Delhi',
+population: 12000,
+languages: ['Hindi', 'urdu', 'Sanskrit']
+}
+console.log(countries);
+
+//let key = Object.keys(countries);
+//let value = Object.values(countries);
+
+console.log(countries.India.capital);
+
+
+           //#### Exercise : level 3 #### 
+
+
+
+              // ** Ques - 1 **
+              
+              
+      let personAccount = {
+      firstName: 'Chirag',
+      lastName: 'Kapoor',
+      incomes: new Set(),
+      expenses: new Set(),
+      
+      addExpenses: function(about,amount){
+        let spend = this.expenses.add({about, amount});
+        return spend;
+      
+      },
+      
+      addIncome: function(about, amount){
+      let earn = this.incomes.add({about, amount});
+      return earn;
+      },
+      
+      totalExpenses: function(){
+      let total = 0;
+      this.expenses.forEach(expenses => total += expenses.amount);
+      return total;
+      },
+      
+      totalIncomes: function(){
+      let total = 0;
+      this.incomes.forEach(incomes => total += incomes.amount)
+      return total;
+      },
+      
+      accountBalance: function() {
+      return this.totalIncomes() - this.totalExpenses();
+      },
+      
+      accountInfo: function(){
+      return `Name: ${this.firstName} ${this.lastName}\nTotal Income: $${this.totalIncomes()}\nTotalExpenses: $${this.totalExpenses()}\nAccount Balance: $${this.accountBalance()}`;
+      }
+      
+      }
+      
+      personAccount.addIncome('salary', 5000);
+      personAccount.addIncome('freelance', 8000);
+      personAccount.addExpenses('rent', 2000);
+      personAccount.addIncome('groceries', 800);
+      
+
+      
+      console.log(personAccount.accountInfo());
+      console.log(personAccount.addIncome());
+      
+      
+                  // ** Ques - 2 **
+                  
+                      
+      
+      const users = [
+{
+_id: 'ab12ex',
+username: 'Alex',
+email: 'alex@alex.com',
+password: '123123',
+createdAt:'08/01/2020 9:00 AM',
+isLoggedIn: false
+},
+{
+_id: 'fg12cy',
+username: 'Asab',
+email: 'asab@asab.com',
+password: '123456',
+createdAt:'08/01/2020 9:30 AM',
+isLoggedIn: true
+},
+{
+_id: 'zwf8md',
+username: 'Brook',
+email: 'brook@brook.com',
+password: '123111',
+createdAt:'08/01/2020 9:45 AM',
+isLoggedIn: true
+},
+{
+_id: 'eefamr',
+username: 'Martha',
+email: 'martha@martha.com',
+password: '123222',
+createdAt:'08/01/2020 9:50 AM',
+isLoggedIn: false
+},
+{
+_id: 'ghderc',
+username: 'Thomas',
+email: 'thomas@thomas.com',
+password: '123333',
+createdAt:'08/01/2020 10:00 AM',
+isLoggedIn: false
+}
+];
+
+      //(a)
+      console.log
+  
+function signUp(id,usernam, emai, passwor, createdA, isLoggedI){
+
+let newMember = '';
+
+let newMan = {_id: id, username: usernam, email: emai, password: passwor, createdAt: createdA, isLoggedIn: isLoggedI}
+
+if(users.includes(newMan)){
+newMember = 'your account is already exist.'
+}
+else{
+newMember = [...users,newMan];
+}
+
+return newMember;
+}
+console.log(signUp('ghderc','Thomas', 'thomas@thomas.com', '123333','08/01/2020 10:00 AM', false ))
+
+
+
+//prime number:
+
 
     </script>
 </body>

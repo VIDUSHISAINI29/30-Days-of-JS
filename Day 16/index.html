@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON</title>
+</head>
+
+<body>
+
+  <script>
+
+    //	#######  Exercise : LEVEl - 1  #######
+
+
+    //			**** Ques - 1 ****
+
+
+    const skills = ['HTML', 'CSS', 'JS', 'React', 'Node', 'Python']
+
+    let new_skills = JSON.stringify(skills)
+    console.log(new_skills)
+
+
+    //			**** Ques - 2 ****
+
+
+    let age = 250;
+    let age_string = JSON.stringify(age)
+    console.log(age_string);
+
+
+    //			**** Ques - 3 ****
+
+
+    let isMarried = true
+    let marry = JSON.stringify(isMarried)
+    console.log(marry);
+
+
+    //			**** Ques - 4 ****
+
+
+    const student = {
+      firstName: 'Asabeneh',
+      lastName: 'Yetayehe',
+      age: 250,
+      isMarried: true,
+      skills: ['HTML', 'CSS', 'JS', 'React', 'Node', 'Python',]
+    }
+
+    let json_stu = JSON.stringify(student)
+    console.log(json_stu);
+
+
+    //	#######  Exercise : LEVEl - 2  #######
+
+
+    //			**** Ques - 1 ****
+
+
+    let json_student = JSON.stringify(student, ['firstName', 'lastName', 'skills'])
+    console.log(json_student);
+
+
+    //	#######  Exercise : LEVEl - 3  #######
+
+
+    //			**** Ques - 1 ****
+
+
+    const txt = `{
+                "Alex": {
+                    "email": "alex@alex.com",
+                    "skills": [
+                        "HTML",
+                        "CSS",
+                        "JavaScript"
+                    ],
+                    "age": 20,
+                    "isLoggedIn": false,
+                    "points": 30
+                },
+                "Asab": {
+                    "email": "asab@asab.com",
+                    "skills": [
+                        "HTML",
+                        "CSS",
+                        "JavaScript",
+                        "Redux",
+                        "MongoDB",
+                        "Express",
+                        "React",
+                        "Node"
+                    ],
+                    "age": 25,
+                    "isLoggedIn": false,
+                    "points": 50
+                },
+                "Brook": {
+                    "email": "daniel@daniel.com",
+                    "skills": [
+                        "HTML",
+                        "CSS",
+                        "JavaScript",
+                        "React",
+                        "Redux"
+                    ],
+                    "age": 30,
+                    "isLoggedIn": true,
+                    "points": 50
+                },
+                "Daniel": {
+                    "email": "daniel@alex.com",
+                    "skills": [
+                        "HTML",
+                        "CSS",
+                        "JavaScript",
+                        "Python"
+                    ],
+                    "age": 20,
+                    "isLoggedIn": false,
+                    "points": 40
+                },
+                "John": {
+                    "email": "john@john.com",
+                    "skills": [
+                        "HTML",
+                        "CSS",
+                        "JavaScript",
+                        "React",
+                        "Redux",
+                        "Node.js"
+                    ],
+                    "age": 20,
+                    "isLoggedIn": true,
+                    "points": 50
+                },
+                "Thomas": {
+                    "email": "thomas@thomas.com",
+                    "skills": [
+                        "HTML",
+                        "CSS",
+                        "JavaScript",
+                        "React"
+                    ],
+                    "age": 20,
+                    "isLoggedIn": false,
+                    "points": 40
+                },
+                "Paul": {
+                    "email": "paul@paul.com",
+                    "skills": [
+                        "HTML",
+                        "CSS",
+                        "JavaScript",
+                        "MongoDB",
+                        "Express",
+                        "React",
+                        "Node"
+                    ],
+                    "age": 20,
+                    "isLoggedIn": false,
+                    "points": 40
+                }
+            }`
+            let json_text = JSON.parse(txt)
+            console.log(json_text);
+
+
+
+            //			**** Ques - 2 ****
+
+            let maxskills = 0;
+            let mostskills = ''
+            for (let users in json_text) {
+              let skillCount = json_text[users].skills.length;
+              if(skillCount > maxskills){
+                maxskills = skillCount;
+                mostskills  = users;
+              }
+            }
+            console.log(`${mostskills} has the most skills with ${maxskills}.`);
+
+
+
+
+  </script>
+
+</body>
+
+</html>

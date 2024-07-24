@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" placeholder="Generate more numbers..." id="input">
+
+<script>
+
+const body = document.querySelector('body')
+body.style.display = 'flex'
+body.style.flexDirection = 'column'
+body.style.alignItems = 'center'
+body.style.position = 'relative'
+
+
+const main_heading = document.createElement('span')
+body.appendChild(main_heading)
+main_heading.innerText = 'Number Generator'
+main_heading.style.fontFamily = 'cursive'
+main_heading.style.color = '#5bbc7a'
+main_heading.style.fontSize =  '35px'
+main_heading.style.fontWeight = '550'
+main_heading.style.padding = '5px'
+
+const which_day = document.createElement('span')
+body.appendChild(which_day)
+which_day.innerText = '30DaysOfJavaScript:DOM Day 3 '
+which_day.style.fontFamily = 'cursive'
+which_day.style.fontSize =  '22px'
+which_day.style.fontWeight = '500'
+
+
+const author = document.createElement('span')
+body.appendChild(author)
+author.innerText = 'Author : Asabeneh Yetayeh '
+author.style.fontFamily = 'cursive'
+author.style.fontSize =  '17px'
+author.style.fontWeight = '500'
+author.style.padding = '7px'
+
+
+const generate_parent = document.createElement('div')
+body.appendChild(generate_parent)
+generate_parent.style.width = '100%'
+generate_parent.style.padding = '10px'
+
+generate_parent.style.display = 'flex'
+generate_parent.style.alignItems = 'center'
+
+generate_parent.style.justifyContent = 'center'
+
+const button = document.querySelector('#input')
+generate_parent.appendChild(button)
+button.style.width = '25%'
+button.style.border = '2px solid #5bbc7a'
+button.style.borderStyle = 'none'
+button.style.padding = '13px'
+button.style.fontSize = '18px'
+button.style.border = '2px solid #5bbc7a'
+button.addEventListener('focus', () => {
+    
+            button.style.outline = 'none';
+        });
+
+
+const showOff = document.createElement('div')
+generate_parent.appendChild(showOff)
+showOff.innerText = 'Generate Numbers'
+showOff.style.fontSize = '23px'
+showOff.style.fontFamily = 'cursive'
+showOff.style.width = '14%'
+showOff.style.padding = '9px'
+showOff.style.margin = '5px'
+showOff.style.backgroundColor = '#5bbc7a'
+showOff.style.color = '#ffffff'
+
+showOff.style.display = 'flex'
+showOff.style.alignItems = 'center'
+showOff.style.justifyContent = 'center'
+
+
+
+const boxes_container = document.createElement('div')
+body.appendChild(boxes_container)
+boxes_container.style.width = '50%'
+boxes_container.style.marginRight = '63px'
+boxes_container.style.padding = '1px'
+
+boxes_container.style.display = 'flex'
+boxes_container.style.flexWrap = 'wrap'
+
+
+function isPrime(num){
+			
+			if(num<=1)
+			return false;
+			if(num === 2)
+			return true;
+			for(i = 2; i <=Math.sqrt(num); i++)
+			{
+				if(num % i === 0)return false;
+			}
+			return true;
+			
+		}
+
+showOff.addEventListener('click', () => {
+
+
+    let primeArray = [];
+		for(m = 0; m <= button.value; m++)
+		{
+		let very = isPrime(m)
+		if(very === true)
+		{
+			primeArray.push(m)
+		}
+		
+		}
+        boxes_container.innerHTML = ''
+
+       
+
+    
+    for(i = 0; i <= button.value ; i++)
+{
+const box = document.createElement('div')
+boxes_container.appendChild(box)
+box.style.width = '6%'
+box.style.padding = '20px'
+box.style.display = 'flex'
+box.style.alignItems = 'center'
+box.style.fontSize = '30px'
+box.style.color = 'white'
+box.style.fontFamily = 'arial'
+box.style.fontWeight = 550
+box.style.justifyContent = 'center'
+box.style.margin = '3px'
+
+box.innerText = `${i}`
+
+if( i % 2 === 0 && i !== 2)
+{
+    box.style.backgroundColor = '#5bbc7a' 
+}
+if( i % 2 !== 0)
+{
+    box.style.backgroundColor = '#f7dc5c' 
+}
+
+if(primeArray.includes(i))
+{
+    box.style.backgroundColor = '#eb695b' 
+}
+
+}
+
+});
+
+const represent1 = document.createElement('div')
+body.appendChild(represent1)
+
+represent1.style.width = '1%'
+represent1.style.height = '15px'
+represent1.style.backgroundColor = '#5bbc7a'
+represent1.style.position = 'absolute'
+represent1.style.top = '30px'
+represent1.style.left = '1250px'
+
+const represent_span1 = document.createElement('span')
+body.appendChild(represent_span1)
+represent_span1.innerText = 'Even Numbers'
+represent_span1.style.position = 'absolute'
+represent_span1.style.top = '26px'
+represent_span1.style.left = '1280px'
+represent_span1.style.fontFamily = 'cursive'
+
+
+const represent2 = document.createElement('div')
+body.appendChild(represent2)
+
+represent2.style.width = '1%'
+represent2.style.height = '15px'
+represent2.style.backgroundColor = '#eb695b'
+represent2.style.position = 'absolute'
+represent2.style.top = '60px'
+represent2.style.left = '1250px'
+
+const represent_span2 = document.createElement('span')
+body.appendChild(represent_span2)
+represent_span2.innerText = 'Prime Numbers'
+represent_span2.style.position = 'absolute'
+represent_span2.style.top = '56px'
+represent_span2.style.left = '1280px'
+represent_span2.style.fontFamily = 'cursive'
+
+
+
+const represent3 = document.createElement('div')
+body.appendChild(represent3)
+
+represent3.style.width = '1%'
+represent3.style.height = '15px'
+represent3.style.backgroundColor = '#f7dc5c' 
+represent3.style.position = 'absolute'
+represent3.style.top = '90px'
+represent3.style.left = '1250px'
+
+const represent_span3 = document.createElement('span')
+body.appendChild(represent_span3)
+represent_span3.innerText = 'Odd Numbers'
+represent_span3.style.position = 'absolute'
+represent_span3.style.top = '86px'
+represent_span3.style.left = '1280px'
+represent_span3.style.fontFamily = 'cursive'
+
+ 
+
+</script>
+
+    
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 11</title>
+</head>
+
+<body>
+
+    <script>
+
+        // ####  Exercise : level-1  ####
+
+
+
+        // ^^^^^^^^^^^  Ques - 1 ^^^^^^^^^^^
+
+
+        const constants = [2.72, 3.14, 9.81, 37, 100]
+        let [e, pi, gravity, humanBodyTemp, waterBoilingTemp] = constants
+        console.log(e, pi, gravity, humanBodyTemp, waterBoilingTemp);
+
+
+        // ^^^^^^^^^^^  Ques - 2 ^^^^^^^^^^^
+
+
+
+        const countries = ['Finland', 'Estonia', 'Sweden', 'Denmark', 'Norway']
+
+        let [fin, est, sw, den, nor] = countries;
+        console.log(fin, est, sw, den, nor);
+
+
+
+        // ^^^^^^^^^^^  Ques - 3 ^^^^^^^^^^^
+
+
+
+        const rectangle = {
+            width: 20,
+            height: 10,
+            area: 200,
+            perimeter: 60
+        }
+        let { width, height, area, perimeter } = rectangle
+        console.log(width, height, area, perimeter);
+
+
+
+        // ####  Exercise : level-2  ####
+
+
+
+        // ^^^^^^^^^^^  Ques - 1 ^^^^^^^^^^^
+
+        const users = [
+            {
+                name: 'Brook',
+                scores: 75,
+                skills: ['HTM', 'CSS', 'JS'],
+                age: 16
+            },
+            {
+                name: 'Alex',
+                scores: 80,
+                skills: ['HTM', 'CSS', 'JS'],
+                age: 18
+            },
+            {
+                name: 'David',
+                scores: 75,
+                skills: ['HTM', 'CSS'],
+                age: 22
+            },
+            {
+                name: 'John',
+                scores: 85,
+                skills: ['HTML'],
+                age: 25
+            },
+            {
+                name: 'Sara',
+                scores: 95,
+                skills: ['HTM', 'CSS', 'JS'],
+                age: 26
+            },
+            {
+                name: 'Martha',
+                scores: 80,
+                skills: ['HTM', 'CSS', 'JS'],
+                age: 18
+            },
+            {
+                name: 'Thomas',
+                scores: 90,
+                skills: ['HTM', 'CSS', 'JS'],
+                age: 20
+            }
+        ];
+
+        for (const { name, scores, skills, age } of users) {
+            console.log(name, scores, skills, age)
+        }
+
+
+        // ^^^^^^^^^^^  Ques - 2 ^^^^^^^^^^^
+
+
+
+
+        for (const { name, scores, skills, age } of users) {
+
+            if (skills.length < 2) {
+                console.log(name)
+            }
+        }
+
+
+
+        // ####  Exercise : level-3  ####
+
+
+        // ^^^^^^^^^^^  Ques - 1 ^^^^^^^^^^^
+
+        const countries_new = [
+            {
+                name: 'Afghanistan',
+                capital: 'Kabul',
+                languages: ['Pashto', 'Uzbek', 'Turkmen'],
+                population: 27657145,
+                flag: 'https://restcountries.eu/data/afg.svg',
+                currency: 'Afghan afghani'
+            },
+            {
+                name: 'Åland Islands',
+                capital: 'Mariehamn',
+                languages: ['Swedish'],
+                population: 28875,
+                flag: 'https://restcountries.eu/data/ala.svg',
+                currency: 'Euro'
+            },
+            {
+                name: 'Albania',
+                capital: 'Tirana',
+                languages: ['Albanian'],
+                population: 2886026,
+                flag: 'https://restcountries.eu/data/alb.svg',
+                currency: 'Albanian lek'
+            },
+            {
+                name: 'Algeria',
+                capital: 'Algiers',
+                languages: ['Arabic'],
+                population: 40400000,
+                flag: 'https://restcountries.eu/data/dza.svg',
+                currency: 'Algerian dinar'
+            },
+            {
+                name: 'American Samoa',
+                capital: 'Pago Pago',
+                languages: ['English', 'Samoan'],
+                population: 57100,
+                flag: 'https://restcountries.eu/data/asm.svg',
+                currency: 'United State Dollar'
+            },
+            {
+                name: 'Andorra',
+                capital: 'Andorra la Vella',
+                languages: ['Catalan'],
+                population: 78014,
+                flag: 'https://restcountries.eu/data/and.svg',
+                currency: 'Euro'
+            },
+            {
+                name: 'Angola',
+                capital: 'Luanda',
+                languages: ['Portuguese'],
+                population: 25868000,
+                flag: 'https://restcountries.eu/data/ago.svg',
+                currency: 'Angolan kwanza'
+            },
+            {
+                name: 'Anguilla',
+                capital: 'The Valley',
+                languages: ['English'],
+                population: 13452,
+                flag: 'https://restcountries.eu/data/aia.svg',
+                currency: 'East Caribbean dollar'
+            },
+            {
+                name: 'Antarctica',
+                capital: '',
+                languages: ['English', 'Russian'],
+                population: 1000,
+                flag: 'https://restcountries.eu/data/ata.svg',
+                currency: 'Australian dollar'
+            }
+        ]
+
+        for (const { name, capital, population, languages } of countries_new) {
+            console.log(name, capital, population, languages);
+        }
+
+
+        // ^^^^^^^^^^^  Ques - 2 ^^^^^^^^^^^
+
+
+        const student = ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]]
+
+        let [name, skills, , jsScore = 90, reactScore = 95] = student
+        console.log(name, skills, jsScore, reactScore)
+
+
+        // ^^^^^^^^^^^  Ques - 3 ^^^^^^^^^^^
+
+
+        const students = [
+            ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]],
+            ['John', ['HTM', 'CSS', 'JS', 'React'], [85, 80, 85, 80]]
+        ]
+
+
+        function converArrayToObjects(parameter) {
+          
+           return parameter.map(student => {
+            const [name, skills, scores] = student;
+            return {
+                name,
+                skills,
+                scores
+            };
+           });
+       
+    }
+        console.log(converArrayToObjects(students));
+
+
+
+        // ^^^^^^^^^^^  Ques - 4 ^^^^^^^^^^^
+
+
+        const pupil = {
+      name: 'David',
+      age: 25,
+      skills: {
+        frontEnd: [
+          { skill: 'HTML', level: 10 },
+          { skill: 'CSS', level: 8 },
+          { skill: 'JS', level: 8 },
+          { skill: 'React', level: 9 }
+        ],
+        backEnd: [
+          { skill: 'Node',level: 7 },
+          { skill: 'GraphQL', level: 8 },
+        ],
+        dataBase:[
+          { skill: 'MongoDB', level: 7.5 },
+        ],
+        dataScience:['Python', 'R', 'D3.js']
+      }
+    }
+
+    const newPupil = {...pupil,
+        skills: {...pupil.skills,
+            frontEnd: [...pupil.skills.frontEnd,
+                {skill: 'BootStrap', level: 8}
+            ],
+            backEnd: [...pupil.skills.backEnd,
+                {skill: 'Express', level: 9}
+            ],
+            dataBase: [...pupil.skills.dataBase,
+                {skill: 'SQL', level: 8}
+            ],
+            dataScience: [...pupil.skills.dataScience,
+                "SQL"
+            ]
+        }
+    }
+    console.log(newPupil)
+
+
+  
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

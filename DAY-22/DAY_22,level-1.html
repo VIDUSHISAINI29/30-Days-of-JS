@@ -1,0 +1,185 @@
+<html>
+
+<head>
+	<title>DAY 22</title>
+</head>
+
+<body>
+
+	<script>
+
+
+
+
+		let nGenerator = document.createElement('div')
+		document.body.appendChild(nGenerator);
+		nGenerator.innerText = 'Number Generator';
+
+		let daysHeading = document.createElement('div')
+		document.body.appendChild(daysHeading)
+		daysHeading.innerText = '30DaysOfJavaScript:DOM Day 2'
+
+		daysHeading.style.marginTop = '4px'
+		daysHeading.style.textDecoration = 'underline'
+		daysHeading.style.fontWeight = 'bold'
+
+
+		let author = document.createElement('div')
+		document.body.appendChild(author)
+		author.innerText = 'Author: Asabeneh Yetayeh'
+		author.style.textDecoration = 'underline'
+		author.style.fontSize = '14px'
+		author.style.marginTop = '2px'
+
+		console.log(nGenerator);
+		document.body.style.fontFamily = 'arial';
+		document.body.style.display = 'flex';
+		document.body.style.flexDirection = 'column';
+		document.body.style.justifyContent = 'center';
+		document.body.style.alignItems = 'center';
+
+
+		nGenerator.style.fontSize = '30px'
+		nGenerator.style.fontWeight = 'bolder'
+
+		let box = document.createElement('div')
+		document.body.appendChild(box)
+		
+		box.style.width = '510px'
+		box.style.height = '840px'
+		box.style.margin = '20px'
+		
+		box.setAttribute('class', 'bigBox')
+		box.style.display = 'flex'
+		box.style.flexWrap = 'wrap'
+		
+		
+		
+		function isPrime(num){
+			
+			if(num<=1)
+			return false;
+			if(num === 2)
+			return true;
+			for(i = 2; i <=Math.sqrt(num); i++)
+			{
+				if(num % i === 0)return false;
+				
+				
+				
+			}
+			return true;
+			
+		}
+		let primeArray = [];
+		for(m = 0; m < 102; m++)
+		{
+		let very = isPrime(m)
+		if(very === true)
+		{
+			primeArray.push(m)
+		}
+		
+		}
+		
+		console.log(primeArray);
+		
+		for(i = 0; i < 102; i++)
+		{
+		
+		let packet = document.createElement('div');
+		packet.style.width = '80px';
+		packet.style.height = '45px';
+
+		packet.style.margin = '2px';
+		packet.innerText = `${i}`
+		packet.style.display = 'flex';
+		packet.style.alignItems = 'center';
+		packet.style.justifyContent = 'center'
+		box.appendChild(packet);
+		
+		if( i % 2 === 0 && i !== 2)
+		{
+			packet.style.backgroundColor = '#21bf73';
+		}
+		if( i % 2 !== 0)
+		{
+			packet.style.backgroundColor = '#fddb3a'
+		}
+		
+		if(primeArray.includes(i))
+		{
+			packet.style.backgroundColor = '#fd5e53'
+		}
+		
+		
+		}
+
+		const body = document.querySelector('body')
+		body.style.position = 'relative'
+
+		const represent1 = document.createElement('div')
+body.appendChild(represent1)
+
+represent1.style.width = '1%'
+represent1.style.height = '15px'
+represent1.style.backgroundColor = '#5bbc7a'
+represent1.style.position = 'absolute'
+represent1.style.top = '30px'
+represent1.style.left = '1250px'
+
+const represent_span1 = document.createElement('span')
+body.appendChild(represent_span1)
+represent_span1.innerText = 'Even Numbers'
+represent_span1.style.position = 'absolute'
+represent_span1.style.top = '26px'
+represent_span1.style.left = '1280px'
+represent_span1.style.fontFamily = 'cursive'
+
+
+const represent2 = document.createElement('div')
+body.appendChild(represent2)
+
+represent2.style.width = '1%'
+represent2.style.height = '15px'
+represent2.style.backgroundColor = '#eb695b'
+represent2.style.position = 'absolute'
+represent2.style.top = '60px'
+represent2.style.left = '1250px'
+
+const represent_span2 = document.createElement('span')
+body.appendChild(represent_span2)
+represent_span2.innerText = 'Prime Numbers'
+represent_span2.style.position = 'absolute'
+represent_span2.style.top = '56px'
+represent_span2.style.left = '1280px'
+represent_span2.style.fontFamily = 'cursive'
+
+
+
+const represent3 = document.createElement('div')
+body.appendChild(represent3)
+
+represent3.style.width = '1%'
+represent3.style.height = '15px'
+represent3.style.backgroundColor = '#f7dc5c' 
+represent3.style.position = 'absolute'
+represent3.style.top = '90px'
+represent3.style.left = '1250px'
+
+const represent_span3 = document.createElement('span')
+body.appendChild(represent_span3)
+represent_span3.innerText = 'Odd Numbers'
+represent_span3.style.position = 'absolute'
+represent_span3.style.top = '86px'
+represent_span3.style.left = '1280px'
+represent_span3.style.fontFamily = 'cursive'
+
+
+
+
+
+	</script>
+</body>
+
+</html>

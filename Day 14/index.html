@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 14</title>
+</head>
+<body>
+
+
+        <script>
+
+            // ####  Exercise 1  ####
+
+            //Task: Write a function that divides two numbers. Use a try...catch block to handle potential errors, such as dividing by zero.
+
+            function divideNum(x, y){
+
+             try{   if(y === 0){
+                    throw new Error('Cannot divide by zero.')
+                }
+                return x / y;
+            } 
+            catch (error) {
+                console.error(error.message)
+
+            }
+        }
+            console.log(divideNum(8,0));
+
+        </script>
+
+    
+</body>
+</html>

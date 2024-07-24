@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegEx</title>
+</head>
+
+<body>
+
+    <script>
+
+        //     ####  Exercise : level - 1  ####
+
+
+        // ************  Ques - 1  ************
+
+
+        const text = "He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online courses per month."
+
+        let salary = /\d+/g
+        let match = text.match(salary)
+
+
+        let salary_sum = 0;
+        for (i = 0; i < match.length; i++) {
+            salary_sum += parseInt(match[i])
+        }
+        console.log('Total Salary = ', salary_sum);
+
+
+        // ************  Ques - 2  ************
+
+        let position_text = "The position of some particles on the horizontal x-axis -12, -4, -3 and -1 in the negative direction, 0 at origin, 4 and 8 in the positive direction"
+
+        let position_num = /-?\d+/g
+        let positions = position_text.match(position_num)
+
+        positions.sort((a, b) => b - a)
+        console.log(positions);
+        let size = positions.length;
+
+        let distance = parseInt(positions[0]) - parseInt(positions[size - 1])
+        console.log('Distance between furthest points is :', distance, 'metres')
+
+
+        // ************  Ques - 3  ************
+
+
+
+        function isValidVarible(variable) {
+
+            let char = /^[A-Za-z_$][a-zA-Z_$0-9]*$/;
+            
+            
+            return  char.test(variable);
+            }
+
+        console.log(isValidVarible('fjh3aj'));
+
+
+
+         //     ####  Exercise : level - 2  ####
+
+
+        // ************  Ques - 1  ************
+
+        let paragraph = `I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.`
+
+        let pattern = /[a-zA-z]+/g
+        let matches = paragraph.match(pattern)
+        console.log(matches);
+        let words_set = new Set(matches)
+        let words_array = Array.from(words_set)
+        
+        console.log(words_array);
+
+        let most_words = words_array.map(word => {
+            return {
+                words: word ,
+               count : matches.filter(group => group == word).length
+            } 
+            });
+            console.log(most_words)
+            most_words.sort((a,b) => b.count-a.count)
+
+            function mostFrequentWords(array, num){
+                return most_words.splice(0,num)
+            }
+            console.log(mostFrequentWords(most_words,4));
+        
+
+        
+            //     ####  Exercise : level - 3  ####
+
+
+        // ************  Ques - 1  ************
+
+        let sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`
+
+
+          let pattern_text = /[^a-zA-Z ]+/g
+        let replace = sentence.replace(pattern_text, '')
+      console.log(replace);
+      let teacher_array = replace.split(' ');
+      
+      console.log(teacher_array);
+      let last_set = new Set(teacher_array)
+      let last_array = Array.from(last_set)
+      console.log(last_set);
+
+      let most = last_array.map(unique =>
+        {
+            return{
+                word: unique,
+                count: teacher_array.filter(not_repeat => not_repeat === unique).length
+            }
+        }
+      )
+
+      most.sort((a,b) => b.count-a.count)
+      function mostFrequent(words, number){
+        return most.splice(0,number);
+      }
+      console.log(mostFrequent(most, 6));
+        
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

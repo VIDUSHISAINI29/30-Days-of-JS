@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const body = document.querySelector('body')
+        body.style.margin = '0px'
+        body.style.display = 'flex'
+        body.style.alignItems = 'center'
+        body.style.justifyContent = 'center'
+        body.style.fontFamily = 'cursive'
+
+        const gifs_div = document.createElement('div')
+        body.appendChild(gifs_div)
+        gifs_div.style.width = '100%'
+        gifs_div.style.height = '100vh'
+        gifs_div.setAttribute('id', 'gif')
+
+        gifs_div.style.backgroundImage = "url('assets/galaxy.gif')"
+        gifs_div.style.backgroundSize = 'contain'
+        gifs_div.style.display = 'flex'
+        gifs_div.style.flexDirection = 'column'
+        gifs_div.style.alignItems = 'center'
+
+
+        const heading = document.createElement('p')
+        gifs_div.appendChild(heading)
+        heading.textContent = 'Calculate Weight of an Object on a Planet'
+
+        heading.style.color = '#fff'
+        heading.style.fontSize = '40px'
+
+        const content_container = document.createElement('div')
+        gifs_div.appendChild(content_container)
+        content_container.style.width = '100%'
+        content_container.style.display = 'flex'
+        content_container.style.alignItems = 'center'
+        content_container.style.justifyContent = 'center'
+        content_container.style.justifyContent = 'center'
+
+        content_container.style.padding = '8px'
+
+        const input = document.createElement('input')
+        content_container.appendChild(input)
+        input.style.width = '14%'
+        input.style.padding = '10px'
+        input.style.outline = 'none'
+        input.style.border = 'none'
+        input.setAttribute('type', 'number')
+        input.setAttribute('placeholder', 'Mass in Kilograms')
+
+        const select = document.createElement('select')
+        content_container.appendChild(select)
+        select.setAttribute('placeholder', '--select--')
+        select.setAttribute('type', 'name')
+        select.style.width = '12%'
+        select.style.padding = '9.5px'
+        select.style.margin = '0px 15px'
+        select.style.border = 'none'
+        select.style.outline = 'none'
+
+
+
+        const planets = [
+            '--select planet--',
+            'Mercury',
+            'Venus',
+            'Earth',
+            'Mars',
+            'Jupiter',
+            'Saturn',
+            'Uranus',
+            'Neptune',
+            'Moon'
+
+        ];
+
+        const g_value = [
+            '--select planet--',
+            '3.61',
+            '8.83',
+            '9.8',
+            '3.75',
+            '26',
+            '11.2',
+            '10.5',
+            '13.3',
+            '1.625'
+
+        ];
+        const data = ['none', 'assets/mercury.png', 'assets/venus.png', 'assets/earth.png', 'assets/mars.png', 'assets/jupiter.png', 'assets/saturn.png', 'assets/uranus.png', 'assets/neptune.png', 'assets/moon.png' ]
+        // option.setAttribute('id', 'g_option')
+        for (i = 0; i < planets.length; i++) {
+            const option = document.createElement('option');
+            option.setAttribute('value', g_value[i])
+            option.innerText = planets[i]
+            select.appendChild(option)
+            option.setAttribute('data-image', data[i])
+        };
+
+
+
+
+
+
+        const planet_pic = document.createElement('div')
+        planet_pic.style.width = '60%'
+        planet_pic.style.padding = '10px'
+        planet_pic.setAttribute('id', 'main_box')
+        gifs_div.appendChild(planet_pic)
+        planet_pic.style.display = 'flex'
+        planet_pic.style.alignItems = 'center'
+        planet_pic.style.justifyContent = 'center'
+        planet_pic.style.backgroundColor = 'rgba(50,50,50,0.5)'
+        planet_pic.style.marginTop = '60px'
+
+        const earth_pic = document.createElement('img')
+        planet_pic.appendChild(earth_pic)
+
+        earth_pic.src = 'assets/earth.png'
+        earth_pic.style.width = '40%'
+        earth_pic.style.padding = '40px 150px'
+
+
+
+
+        const calculate = document.createElement('div')
+        content_container.appendChild(calculate)
+        calculate.style.width = '10%'
+        calculate.style.backgroundColor = '#6c6c6c'
+        calculate.style.color = '#fff'
+        calculate.innerText = 'Calculate Weight'
+        calculate.style.display = 'flex'
+        calculate.style.alignItems = 'center'
+        calculate.style.justifyContent = 'center'
+        calculate.style.padding = '6.5px'
+
+
+
+
+
+        calculate.addEventListener('click', () => {
+            if (input.value == '' && select.value == '--select planet--') {
+
+                const same = document.querySelector('#warn')
+                if (same) {
+                    gifs_div.removeChild(alert)
+                }
+
+
+                const alert = document.createElement('div')
+                gifs_div.appendChild(alert)
+                alert.setAttribute('id', 'warn')
+                alert.innerText = 'Mass is required '
+                alert.style.width = '20%'
+                alert.style.padding = '30px'
+                alert.style.marginTop = '80px'
+                alert.style.fontSize = '30px'
+                alert.style.display = 'flex'
+                alert.style.alignItems = 'center'
+                alert.style.justifyContent = 'center'
+                alert.style.backgroundColor = 'rgba(50,50,50,0.5)'
+                alert.style.color = '#fff'
+
+                const main_box_copy = document.querySelector('#main_box')
+                if (main_box_copy) {
+                    gifs_div.removeChild(main_box_copy)
+                    console.log('vidushi saini')
+                }
+
+            }
+
+            if (input.value == '' && select.value != '--select planet--') {
+                const same = document.querySelector('#warn')
+                if (same) {
+                    gifs_div.removeChild(alert)
+                }
+
+
+                const alert = document.createElement('div')
+                gifs_div.appendChild(alert)
+                alert.setAttribute('id', 'warn')
+                alert.innerText = 'Mass is required '
+                alert.style.width = '20%'
+                alert.style.padding = '30px'
+                alert.style.marginTop = '80px'
+                alert.style.fontSize = '30px'
+                alert.style.display = 'flex'
+                alert.style.alignItems = 'center'
+                alert.style.justifyContent = 'center'
+                alert.style.backgroundColor = 'rgba(50,50,50,0.5)'
+                alert.style.color = '#fff'
+
+
+                const main_box_copy2 = document.querySelector('#main_box')
+
+                if (main_box_copy2) {
+                    gifs_div.removeChild(main_box_copy2)
+                }
+                const warning4 = document.querySelector('#warn2')
+                if (warning4) {
+                    gifs_div.removeChild(warning4)
+                }
+
+            }
+
+
+            if (select.value == '--select planet--' && input.value != '') {
+                const copy = document.querySelector('#warn2')
+                if (copy) {
+                    gifs_div.removeChild(copy)
+                }
+
+                const alert2 = document.createElement('div')
+                gifs_div.appendChild(alert2)
+                alert2.setAttribute('id', 'warn2')
+                alert2.innerText = 'You did not choose a planet yet'
+                alert2.style.width = '20%'
+                alert2.style.padding = '30px'
+                alert2.style.marginTop = '80px'
+                alert2.style.fontSize = '30px'
+                alert2.style.display = 'flex'
+                alert2.style.alignItems = 'center'
+                alert2.style.justifyContent = 'center'
+                alert2.style.backgroundColor = 'rgba(50,50,50,0.5)'
+                alert2.style.color = '#fff'
+
+                const main_box_copy_last = document.querySelector('#main_box')
+
+                if (main_box_copy_last) {
+                    gifs_div.removeChild(main_box_copy_last)
+                }
+                const warning_last = document.querySelector('#warn')
+                if (warning_last) {
+                    gifs_div.removeChild(warning_last)
+                }
+
+            }
+
+        });
+
+
+       
+
+
+        calculate.addEventListener('click', () => {
+
+            const planet_name = select.options[select.selectedIndex].text
+            const acc_gravity = parseFloat(select.value)
+            const mass = parseFloat(input.value)
+            const imageUrl = select.options[select.selectedIndex].getAttribute('data-image');      
+
+            
+
+            if (select.value != '--select planet--' && input.value != '') {
+                const planet_image = document.createElement('div')
+                planet_image.style.width = '60%'
+                planet_image.style.height = '500px'
+                planet_image.setAttribute('id', 'main_box')
+                gifs_div.appendChild(planet_image)
+                planet_image.style.display = 'flex'
+                planet_image.style.alignItems = 'center'
+                planet_image.style.justifyContent = 'center'
+                planet_image.style.backgroundColor = 'rgba(50,50,50,0.5)'
+                planet_image.style.marginTop = '60px'
+
+                const earth_image = document.createElement('img')
+                planet_image.appendChild(earth_image)
+
+                earth_image.src = `${imageUrl}`
+                earth_image.style.width = '30%'
+                earth_image.style.padding = '20px 15px'
+
+                const weight = document.createElement('div')
+                planet_image.appendChild(weight)
+                weight.style.width = '40%'
+                weight.style.height = '180px'
+                weight.style.marginLeft = '80px'
+                weight.style.display = 'flex'
+                weight.style.flexDirection = 'column'
+                weight.style.alignItems = 'center'
+                weight.style.justifyContent = 'center'
+                weight.style.backgroundColor = 'rgba(50,50,50,0.5)'
+
+
+                const weight_p = document.createElement('p')
+                weight.appendChild(weight_p)
+                weight_p.style.color = '#fff'
+                weight_p.innerText = `The weight of an object on ${planet_name} is`
+                weight_p.style.fontSize = '20px'
+                weight_p.style.fontSize = '20px'
+
+                const weight_output = document.createElement('div')
+                weight.appendChild(weight_output)
+                 weight_output.style.backgroundColor = 'rgba(80,80,90,0.5)'
+                 weight_output.style.width = '30%'
+                 weight_output.style.height = '100px'
+                 weight_output.style.borderRadius = '10px'
+
+                 const newton = document.createElement('span')
+                 weight_output.appendChild(newton)
+                 newton.innerText = mass*acc_gravity + 'N'
+                 newton.style.fontSize = '30px'
+                 newton.style.display = 'flex'
+                 newton.style.color = '#fff'
+                
+                newton.style.alignItems = 'center'
+                newton.style.justifyContent = 'center'
+
+                const waste = document.querySelector('#main_box')
+
+                if (waste) {
+                    gifs_div.removeChild(waste)
+                }
+
+          
+            }
+            const last_warn = document.querySelector('#warn')
+                if(last_warn)
+                {
+                    gifs_div.removeChild(last_warn)
+                }
+
+
+                const last_warn2 = document.querySelector('#warn2')
+                if(last_warn2)
+                {
+                    gifs_div.removeChild(last_warn2)
+                }
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>

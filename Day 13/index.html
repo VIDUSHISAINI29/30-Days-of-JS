@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>console</title>
+</head>
+<body>
+
+
+    <script>
+     
+
+     
+        //     ####  Exercise : level - 1  ####
+
+
+        // ************  Ques - 1  ************
+
+
+                    const countries = [
+                ['Finland', 'Helsinki'],
+                ['Sweden', 'Stockholm'],
+                ['Norway', 'Oslo']
+                ]
+                console.table(countries)
+
+
+
+        // ************  Ques - 2  ************
+
+
+                        const countriess = [
+                {
+                    name: 'Afghanistan',
+                    capital: 'Kabul',
+                    languages: ['Pashto', 'Uzbek', 'Turkmen'],
+                    population: 27657145,
+                    flag: 'https://restcountries.eu/data/afg.svg',
+                    currency: 'Afghan afghani'
+                },
+                {
+                    name: 'Åland Islands',
+                    capital: 'Mariehamn',
+                    languages: ['Swedish'],
+                    population: 28875,
+                    flag: 'https://restcountries.eu/data/ala.svg',
+                    currency: 'Euro'
+                },
+               
+                {
+                    name: 'American Samoa',
+                    capital: 'Pago Pago',
+                    languages: ['English', 'Samoan'],
+                    population: 57100,
+                    flag: 'https://restcountries.eu/data/asm.svg',
+                    currency: 'United State Dollar'
+                },
+                {
+                    name: 'Andorra',
+                    capital: 'Andorra la Vella',
+                    languages: ['Catalan'],
+                    population: 78014,
+                    flag: 'https://restcountries.eu/data/and.svg',
+                    currency: 'Euro'
+                }];
+                console.table(countriess)
+
+                 // ************  Ques - 3  ************
+
+
+                 const names = ['Asabeneh', 'Brook', 'David', 'John']
+
+                 const user = {
+                    name: 'Asabeneh',
+                    title: 'Programmer',
+                    country: 'Finland',
+                    city: 'Helsinki',
+                    age: 250
+                    }
+                    console.group('na')
+                    console.log(names)
+                    console.groupEnd()
+
+                    console.group('use')
+                    console.log(user)
+                    console.groupEnd()
+
+
+
+                    //     ####  Exercise : level - 2  ####
+
+
+                    // ************  Ques - 1  ************
+
+
+                    console.assert(10  > (2*10))
+
+                     // ************  Ques - 2  ************
+
+
+                     console.warn('Warnings are always sweet')
+
+
+                      // ************  Ques - 3  ************
+
+                      console.error('Errors are always irritating')
+
+
+                        //     ####  Exercise : level - 3  ####
+
+
+                    // ************  Ques - 1  ************
+
+                    //WHILE
+                    console.time('while loop')
+                    let i = 0;
+                    while(i < 5){
+                        console.log('I am While loop.');
+                        i++;
+                    }
+                    console.timeEnd('while loop')
+
+                    //FOR
+                    console.time('for loop')
+                    for(i = 0; i < 5; i++)
+                    {
+                        console.log('I am For loop')
+                    }
+                    console.timeEnd('for loop')
+
+                    //FOR OF
+                    console.time('for of loop')
+                    for(const naam of names)
+                    {
+                        console.log(naam)
+                    }
+                    console.timeEnd('for of loop')
+
+
+                    //FOREACH
+                    console.time('forEach loop')
+                    names.forEach((items) => {
+                        console.log(items)
+                    }
+                )
+                console.timeEnd('forEach loop')
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

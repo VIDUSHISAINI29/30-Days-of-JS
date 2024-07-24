@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 15</title>
+</head>
+
+<body>
+
+  <script>
+
+
+    //     ####  Exercise : level - 1  ####
+
+
+    // **********  Ques - 1  **********
+
+
+    class Animal {
+      constructor(name, age, color, legs, owner, friend) {
+        console.log(this)
+        this.name = name
+        this.age = age
+        this.color = color
+        this.legs = legs
+        this.owner = owner
+        this.friend = friend
+      }
+
+      getDoggy() {
+        const about = `Name of my dog is ${this.name}. It is ${this.age} years old. It is of ${this.color} colour. It has ${this.legs} legs`
+        return about
+      }
+    }
+
+    const animal = new Animal('tommy', 6, 'brown & white', 4)
+
+    console.log(animal)
+    console.log(animal.getDoggy());
+
+
+    class Dog extends Animal{
+      constructor(name){
+        super(name)
+        console.log(this)
+        this.name = name
+      }
+      getName(){
+        return `Name of the Dog is ${this.name}`
+      }
+    }
+
+
+
+      // **********  Ques - 2  **********
+
+    const dogName = new Dog('Jacky')
+    console.log(dogName.getName())
+
+    class Cat extends Animal{
+      constructor(name){
+        super(name)
+        console.log(this)
+        this.name = name
+      }
+      getName(){
+        return `Name of the Cat is ${this.name}`
+      }
+    }
+
+    const CatName = new Cat('Queen')
+    console.log(CatName.getName())
+
+
+ 
+    //     ####  Exercise : level - 2  ####
+
+
+    // **********  Ques - 1  **********
+
+
+    animal.setowner
+    
+
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-22 , level-3</title>
+</head>
+<body>
+
+	<script>
+
+	const asabenehChallenges2020 = {
+		description: 'Asabeneh Yetayeh challenges',
+		challengeTitle: 'Asabeneh Yetayeh challenges',
+		challengeSubtitle: '30DaysOfJavaScript Challenge',
+		challengeYear: 2020,
+		keywords: [
+		  'HTML',
+		  'HTML5',
+		  'CSS',
+		  'CSS3',
+		  'JS',
+		  'JavaScript',
+		  'ES6',
+		  'Promise',
+		  'async await',
+		  'Database',
+		  'React',
+		  'React Hooks',
+		  'Context API',
+		  'React Router',
+		  'Web Storage',
+		  'localStorage',
+		  'sessionStorage',
+		  'Redux',
+		  'Node',
+		  'MongoDB',
+		  'SQL',
+		  'API',
+		  'DOM',
+		  'data science',
+		  'MERN',
+		  'Python',
+		  'Flask',
+		  'Statistics',
+		  'Linear Algebra',
+		  'Numpy',
+		  'Pandas',
+		  'Scipy',
+		  'Scikit-learn',
+		  'Visualization',
+		  'D3.js'
+		],
+		author: {
+		  firstName: 'Asabeneh',
+		  lastName: 'Yetayeh',
+		  titles: [
+			['🌱', 'Educator'],
+			['💻', 'Programmer'],
+			['🌐', 'Developer'],
+			['🔥', 'Motivator'],
+			['📔', 'Content Creator']
+		  ],
+		  qualifications: [
+			'MSc. Computer Science Ongoing',
+			'BSc. Information and Communication Eng.',
+			'MSc. Food Technology',
+			'BSc.Food Technology'
+		  ],
+		  socialLinks: [
+			{
+			  social: 'LinkedIn',
+			  url: 'https://www.linkedin.com/in/asabeneh/',
+			  fontawesomeIcon: 'icons/linkedin.svg'
+			},
+			{
+			  social: 'Twitter',
+			  url: 'https://twitter.com/Asabeneh',
+			  fontawesomeIcon: 'icons/twitter.svg'
+			},
+			{
+			  social: 'Github',
+			  fontawesomeIcon: 'icons/github.svg',
+			  url: 'https://github.com/Asabeneh'
+			},
+			{
+			  social: 'DEV.to',
+			  fontawesomeIcon: '',
+			  url: 'https://dev.to/asabeneh'
+			}
+		  ],
+		  skills: [
+			'Web Development',
+			'Data Analysis',
+			'Data Visualization',
+			'Programming',
+			'Databases',
+			'Developing API'
+		  ],
+		  bio:
+			'I am an educator, developer, motivator and content creator. I am a life-long learner. If you like to know more about me checkout my LinkedIn or Github profile. Thank you so much for joining in my quest of changing everyone to developer.'
+		},
+		challenges: [
+		  {
+			name: '30 Days Of Python',
+			topics: [
+			  'Python',
+			  'Flask',
+			  'Numpy',
+			  'Pandas',
+			  'Statistics',
+			  'API',
+			  'MongoDB'
+			],
+			days: 30,
+			status: 'Done',
+			questions: 'Above 500',
+			projects: 'Two',
+			interviewQns: '',
+			githubUrl: 'https://github.com/Asabeneh/30-Days-Of-Python'
+		  },
+		  {
+			name: '30 Days Of JavaScript',
+			topics: ['JavaScript', 'ES6', 'Promise', 'async and await', 'DOM'],
+			days: 30,
+			status: 'Ongoing',
+			questions: 'Above 500',
+			projects: 'About 30',
+			interviewQns: '',
+			githubUrl: 'https://github.com/Asabeneh/30DaysOfJavaScript'
+		  },
+		  {
+			name: '30 Days Of HTML & CSS',
+			topics: ['CSS', 'Flex', 'Grid', 'CSS Animation'],
+			days: 30,
+			status: 'Coming',
+			questions: 'Above 500',
+			projects: 'Two',
+			interviewQns: '',
+			githubUrl: ''
+		  },
+		  {
+			name: '30 Days Of React',
+			topics: [
+			  'React',
+			  'React Router',
+			  'Redux',
+			  'Context API',
+			  'React Hooks',
+			  'MERN'
+			],
+			days: 30,
+			status: 'Coming',
+			questions: '',
+			projects: '',
+			interviewQns: '',
+			githubUrl: ''
+		  },
+		  {
+			name: '30 Days Of ReactNative',
+			topics: ['ReactNative', 'Redux'],
+			days: 30,
+			status: 'Coming',
+			questions: '',
+			projects: 'Two',
+			interviewQns: '',
+			githubUrl: ''
+		  },
+		  {
+			name: '30 Days Of Fullstack',
+			topics: ['React', 'Redux', 'MongoDB', 'Node', 'MERN'],
+			days: 30,
+			status: 'Coming',
+			questions: '',
+			projects: '',
+			interviewQns: '',
+			githubUrl: ''
+		  },
+		  {
+			name: '30 Days Of Data Analysis',
+			topics: ['Python', 'Numpy', 'Pandas', 'Statistics', 'Visualization'],
+			days: 30,
+			status: 'Coming',
+			questions: '',
+			projects: '',
+			interviewQns: '',
+			githubUrl: ''
+		  },
+		  {
+			name: '30 Days Of Machine Learning',
+			topics: [
+			  'Python',
+			  'Numpy',
+			  'Pandas',
+			  'Scikit-learn',
+			  'Scipy',
+			  'Linear Algebra',
+			  'Statistics',
+			  'Visualization'
+			],
+			days: 30,
+			status: 'Coming',
+			questions: '',
+			projects: '',
+			interviewQns: '',
+			githubUrl: ''
+		  }
+		]
+	  }
+
+
+	const body = document.querySelector('body')
+	body.style.display = 'flex'
+	body.style.flexDirection = 'column'
+	body.style.alignItems = 'center'
+	body.style.fontFamily = 'arial'
+
+	let main_div = document.createElement('div')
+	body.appendChild(main_div)
+	main_div.style.width = '100%'
+	main_div.style.height = '75px'
+	
+
+	main_div.style.display = 'flex'
+	main_div.style.justifyContent = 'center'
+	
+
+	let main_span1 = document.createElement('span')
+	main_div.appendChild(main_span1)
+	main_span1.textContent = asabenehChallenges2020.description + ' in  '
+	main_span1.style.fontSize = '35px'
+	main_span1.style.marginTop = '23px'
+let main_span2 = document.createElement('span')
+
+main_div.appendChild(main_span2)
+main_span2.textContent = asabenehChallenges2020.challengeYear
+main_span2.style.fontSize = ' 60px'
+main_span2.style.marginLeft = '10px'
+let challenge_name = document.createElement('span')
+challenge_name.textContent =  asabenehChallenges2020.challengeSubtitle
+body.appendChild(challenge_name)
+challenge_name.style.fontSize = '20px'
+challenge_name.style.textDecoration = 'underline'
+
+function generateColor() {
+		let character = 'abcdef1234567890';
+		let color = ''
+		for(i = 0 ; i < 6; i++){
+			 random = character[Math.floor(Math.random()*character.length)]
+			 color += random;
+		}
+		
+	return `#${color}`
+	}
+
+	function colorTwenty() {
+		main_span2.style.color = generateColor()
+	}
+	
+	setInterval(colorTwenty, 1000)
+
+
+	const time = document.createElement('span')
+	time.className = 'timing'
+	body.appendChild(time)
+	time.style.padding = ' 12px'
+	time.style.margin = ' 12px'
+
+	
+	
+	function setTime() {
+	time.innerHTML = dateTime();
+	
+	}
+	setInterval(setTime, 1000)
+
+	function changeColor() {
+		time.style.backgroundColor = generateColor()
+	}
+	setInterval(changeColor, 1000)
+
+
+	function dateTime() {
+	const now = new Date();
+	let year = now.getFullYear() ;
+	let month = now.getMonth();
+	let  date = now.getDate();
+	let hour = now.getHours();
+	let minute = now.getMinutes();
+	let second = now.getSeconds();
+	let monthName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+	for(i = 0; i < monthName.length; i++){
+	if(month === i)
+	{
+		month = monthName[i];
+	}
+	}
+	
+		if(date < 10 )
+	{
+		date = `0${date}`;
+	}
+		if(hour < 10 )
+	{
+		hour = `0${hour}`;
+	}
+		if(minute < 10 )
+	{
+		minute = `0${minute}`;
+	}
+		if(second < 10 )
+	{
+		second = `0${second}`;
+	}
+	
+	return (`${month} ${date}, ${year} ${hour}:${minute}:${second} `)
+	
+	}
+
+	function get_challenges() {
+		let names = asabenehChallenges2020.challenges.map(challenges =>  challenges.name );
+		return names;
+	}
+	
+	let name_of_challenge = get_challenges();
+
+	function get_skill() {
+		let skill_name = asabenehChallenges2020.challenges.map(challenges =>  challenges.name.substr(11) );
+		return skill_name;
+	}
+	
+	let skills = get_skill();
+
+	function get_topics(){
+		let topic_names = asabenehChallenges2020.challenges.map(challenges => challenges.topics);
+		return topic_names;
+	}
+
+	let topic_details = get_topics()
+
+
+
+	function get_status(){
+		let showoff = asabenehChallenges2020.challenges.map(challenges => challenges.status)
+		return showoff;
+	}
+
+	let status = get_status();
+
+
+
+		for(i = 0; i < name_of_challenge.length; i++)
+{
+
+	let challenge_div = document.createElement('div')
+	body.appendChild(challenge_div)
+	challenge_div.style.width = '50%'
+	challenge_div.style.padding = '25px'
+	challenge_div.style.backgroundColor ='#fd5e53'
+	challenge_div.style.display = 'flex'
+	challenge_div.style.justifyContent = 'space-between'
+	
+	challenge_div.style.alignItems = 'center'
+	challenge_div.style.margin = '2px'
+
+	let span1 = document.createElement('span')
+	challenge_div.appendChild(span1)
+	span1.textContent = name_of_challenge[i]
+	
+	span1.style.textDecoration = 'underline'
+
+	let span2 = document.createElement('details')
+	challenge_div.appendChild(span2)
+	
+
+	let summary1 = document.createElement('summary')
+	span2.appendChild(summary1)
+	summary1.textContent = skills[i]
+
+	let content1 = document.createElement('span')
+	span2.appendChild(content1)
+	content1.innerText = topic_details[i].join('\n')
+
+	let span3 = document.createElement('span')
+	challenge_div.appendChild(span3)
+	span3.textContent = status[i]
+
+	if(status[i].includes('Done')) 
+	{
+		challenge_div.style.backgroundColor ='#21bf73'
+		span1.style.color = 'navy'
+	}
+	
+	if(status[i].includes('Ongoing')) 
+	{
+		challenge_div.style.backgroundColor ='#fddb3a'
+		span1.style.color = 'purple'
+	}
+}
+
+	let author_name = document.createElement('span')
+	body.appendChild(author_name)
+	let first = asabenehChallenges2020.author.firstName
+	let last =  asabenehChallenges2020.author.lastName
+	author_name.innerText = `${first} ${last}`
+	author_name.style.fontSize = '30px'
+	author_name.style.fontWeight = '550'
+	author_name.style.margin = '15px'
+
+
+
+	let social_links = asabenehChallenges2020.author;
+	
+	function  get_urls(){
+
+		let urls =social_links.socialLinks.map(link => link.url);
+		return urls
+	} 
+	
+	let url_for_images = get_urls()
+
+	let iframes = social_links.socialLinks.map(link => link.fontawesomeIcon);
+
+
+
+	let icons_div = document.createElement('div')
+	body.appendChild(icons_div)
+	icons_div.style.width = '100%'
+	icons_div.style.height = '50px'
+	icons_div.style.display = 'flex'
+	icons_div.style.justifyContent = 'center'
+	icons_div.style.alignItems = 'center'
+	
+
+	for(i = 0; i < 3; i++)
+{
+   let linkedin_div = document.createElement('div')
+   icons_div.appendChild(linkedin_div)
+   linkedin_div.style.width = '40px'
+   linkedin_div.style.height = '40px'
+   linkedin_div.style.padding = '4px'
+
+
+   let anchor = document.createElement('a')
+   linkedin_div.appendChild(anchor)
+   anchor.href = url_for_images[i]
+   anchor.target = '_blank';
+
+
+   let linkedin_icon = document.createElement('img')
+   anchor.appendChild(linkedin_icon)
+   linkedin_icon.src = iframes[i]
+
+   
+
+}
+
+	let para_div = document.createElement('div')
+	body.appendChild(para_div)
+	let para = document.createElement('p')
+	  para_div.appendChild(para)
+	  para_div.style.padding = '10px'
+	  para_div.style.width = '53%'
+	  para.innerText = social_links.bio
+	  para.style.textAlign = 'center' 
+
+
+
+
+	  let titles =  social_links.titles
+	  let skills_name =  social_links.skills
+	  let qualifications_name =  social_links.qualifications
+
+	  let titles_skills_div = document.createElement('div')
+	  body.appendChild(titles_skills_div)
+	 
+	  titles_skills_div.style.width = '55%'
+	  titles_skills_div.style.padding = '20px'
+	  titles_skills_div.style.display = 'flex'
+	  titles_skills_div.style.justifyContent = 'space-around'
+
+	  let titles_div = document.createElement('div')
+	  let skills_div = document.createElement('div')
+	  let qualifications_div = document.createElement('div')
+	  titles_skills_div.appendChild(titles_div)
+	  titles_skills_div.appendChild(skills_div)
+	  titles_skills_div.appendChild(qualifications_div)
+	  titles_div.style.width = '33%'
+	  
+	  
+	  skills_div.style.padding = '5px'
+	  titles_div.style.padding = '15px'
+	 
+	  
+	  qualifications_div.style.padding = '100px'
+	  
+	 skills_div.style.width = '33%'
+	  qualifications_div.style.width = '33%'
+	    qualifications_div.style.padding = '5px'
+	    qualifications_div.style.margin = '10px'
+	    skills_div.style.margin = '10px'
+	    titles_div.style.margin = '10px'
+	    titles_div.style.padding = '5px'
+
+
+	let title_head = document.createElement('span')
+	titles_div.appendChild(title_head)
+	title_head.innerText = 'Titles'
+	title_head.style.fontSize = '18px'
+	title_head.style.fontWeight = 550
+
+		  titles.forEach(subtitle => {
+		 const p = document.createElement('p');
+		 p.style.whiteSpace = 'noWrap'
+		 p.style.lineHeight = '9px'
+p.textContent = `${subtitle[0]} ${subtitle[1]}`;
+titles_div.appendChild(p)
+	  })
+
+
+	  let skills_head = document.createElement('span')
+	skills_div.appendChild(skills_head)
+	skills_head.innerText = 'Skills'
+	skills_head.style.fontSize = '18px'
+	skills_head.style.fontWeight = 550
+
+
+	for(j = 0; j < skills_name.length; j++)
+		{
+
+			let svg_text = document.createElement('div')
+		 svg_text.style.width = '100%'
+		 svg_text.style.height = '30px'
+		 svg_text.style.margin = '3px 0px'
+		 
+		 svg_text.style.display = 'flex'
+		 svg_text.style.flexDirection = 'row'
+		 svg_text.style.alignItems = 'center'
+		 skills_div.appendChild(svg_text)
+
+		 let tick = document.createElement('img')
+		 tick.style.width = '16px'
+		 tick.style.height = '16px'
+		 tick.src = 'icons/tick.svg'
+		 svg_text.appendChild(tick)
+
+		 let skill_text = document.createElement('div')
+		 skill_text.style.padding = '5px'
+		 skill_text.style.whiteSpace = 'noWrap'
+		 skill_text.innerText = skills_name[j]
+		 svg_text.appendChild(skill_text)
+		}
+
+		let qualifications_head = document.createElement('span')
+	qualifications_div.appendChild(qualifications_head)
+	qualifications_head.innerText = 'Qualifications'
+	qualifications_head.style.fontSize = '18px'
+	qualifications_head.style.fontWeight = 550
+	
+
+	
+	for(j = 0; j < qualifications_name.length; j++)
+		{
+
+			let svg_text_qual = document.createElement('div')
+		 svg_text_qual.style.width = '100%'
+		 svg_text_qual.style.height = '30px'
+		 svg_text_qual.style.margin = '3px 0px'
+		
+		 svg_text_qual.style.display = 'flex'
+		 svg_text_qual.style.flexDirection = 'row'
+		 svg_text_qual.style.alignItems = 'center'
+		 qualifications_div.appendChild(svg_text_qual)
+
+		 let qual = document.createElement('img')
+		 qual.style.width = '16px'
+		 qual.style.height = '16px'
+		 qual.src = 'icons/degree.svg'
+		 svg_text_qual.appendChild(qual)
+
+		 let skill_text_qual = document.createElement('p')
+		 skill_text_qual.style.padding = '5px'
+		 skill_text_qual.style.whiteSpace = 'noWrap'
+		 skill_text_qual.innerText = qualifications_name[j]
+		 svg_text_qual.appendChild(skill_text_qual)
+		console.log(skill_text_qual)
+		if(qualifications_name[j].includes('Ongoing')){
+			qual.src = 'icons/books.svg'
+		 }
+		}
+
+		function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+	
+
+		let last_div = document.createElement('div')
+		body.appendChild(last_div)
+		last_div.style.width = '47%'
+		last_div.style.padding = '20px'
+		
+		let keywords_head = document.createElement('p')
+		last_div.appendChild(keywords_head)
+		keywords_head.innerText = "Keywords"
+		keywords_head.style.fontSize = '20px'
+		keywords_head.style.fontWeight = 550
+		let keyword_name = asabenehChallenges2020.keywords
+
+		for(i = 0; i < keyword_name.length; i++)
+		{
+			let button = document.createElement('button')
+			last_div.appendChild(button)
+			button.innerText = `# ${ keyword_name[i]}`
+			button.style.borderStyle = 'none'
+			button.style.padding = '5px'
+			button.style.margin = '5px'
+			button.style.borderRadius = '10px'
+			button.style.fontStyle = 'italic'	
+
+			button.style.backgroundColor = getRandomColor()
+			
+		}
+		
+	
+		
+
+		
+
+
+</script>
+    
+</body>
+</html>

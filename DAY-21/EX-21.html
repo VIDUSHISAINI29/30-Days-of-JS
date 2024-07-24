@@ -1,0 +1,165 @@
+
+<html>
+
+		<body>
+		
+								 
+						 <p id = 'fst'> first para  </p>
+						 <p id = 'sec'> second para </p>
+						 <p id = 'thd'> third para  </p>
+						 <p id = 'for'> fourth para </p>
+		
+				<script>
+				
+				//	#######  Exercise : LEVEl - 1 #######
+				
+						//		 **** Ques - 1 ****
+						
+
+						 let first = document.querySelector('p');
+						 console.log(first);
+						 
+						 
+						//		 **** Ques - 2 ****
+						
+						
+						 let second = document.querySelector('#fst');
+						 console.log(second);
+						 
+						 
+						 //		 **** Ques - 3 ****
+		
+						 
+						 let all = document.querySelectorAll('p');
+						 console.log(all);
+						 
+						 
+						 //		 **** Ques - 4 ****
+						 
+						 
+						 let all_items = document.querySelectorAll('p')
+						 let trues = '' ;
+						 all_items.forEach((items,i) => {
+							
+						 trues = items;
+						 console.log(trues);
+						 });
+						 
+						 
+						 //		 **** Ques - 5 ****
+						 
+						 
+						 let fourth = document.querySelectorAll('p')
+						 fourth[3].textContent = 'i am the fourth paragraph';
+						 
+						 console.log(fourth);
+						 
+						 
+						// 		 **** Ques - 6 ****
+						
+						 let all_elements = document.querySelectorAll('p')
+						 for (i = 0; i < all_elements.length; i++)
+						{
+							all_elements[i].setAttribute('class', 'eka')
+						}
+						 console.log(all_elements);
+						 
+						 
+						 for (i = 0; i < all_elements.length; i++)
+						{
+						all_elements[i].id= ('class')
+						}
+						 console.log(all_elements);
+						 
+						for(i = 0; i < all_elements.length; i++)
+						{
+							all_elements[i].classList.add('eka', 'true')
+							
+						}
+						 
+						 
+						 console.log(all_elements);
+						 
+						 
+						 //	#######  Exercise : LEVEl - 2 #######
+						 
+						 
+								//	 **** Ques - 1 ****
+						 
+						 
+						 for(i = 0; i < all_elements.length; i++)
+						{
+							all_elements[i].style.color = 'green'
+						}
+						
+						for(i = 0; i < all_elements.length; i++)
+						{
+							all_elements[i].style.backgroundColor = 'rgb(255,255,255)'
+						}
+						
+						
+						 for(i = 0; i < all_elements.length; i++)
+						{
+							all_elements[i].style.border = '2px solid pink'
+						}
+						
+						for(i = 0; i < all_elements.length; i++)
+						{
+							all_elements[i].style.fontSize = '35px'
+						}
+						 for(i = 0; i < all_elements.length; i++)
+						{
+							all_elements[i].style.fontFamily = 'arial'
+						}
+						
+						
+									//	 **** Ques - 2 ****
+									
+									
+						 for(i = 0; i < all_elements.length; i++)
+						{
+							if(i % 2 != 0)
+							{
+								all_elements[i].style.color = 'red'
+							}
+							else{
+								all_elements[i].style.color = 'green'
+							}
+						}
+						 
+								//	 **** Ques - 3 ****
+								
+						
+						for(i = 0; i < all_elements.length; i++)
+						{
+							all_elements[i].textContent = 'i am vidushi saini'
+						}
+						
+						
+						for(i = 0; i < all_elements.length; i++)
+						{
+							all_elements[i].setAttribute('class', 'vids') 
+						}
+						console.log(all_elements)
+						
+							for(i = 0; i < all_elements.length; i++)
+						{
+							all_elements[i].setAttribute('id', 'vids') 
+						}
+						console.log(all_elements)
+						
+						
+						
+						
+						 
+						
+								
+								
+								
+								
+				</script>
+
+
+		</body>
+
+</html>

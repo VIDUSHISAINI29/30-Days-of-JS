@@ -1,0 +1,147 @@
+
+<html>
+  <head>
+    <title>JavaScript for Everyone:DOM</title>
+  </head>
+  <body>
+    <div class="wrapper">
+        <h1>Asabeneh Yetayeh challenges in 2020</h1>
+        <h2>30DaysOfJavaScript Challenge</h2>
+        <ul>
+            <li>30DaysOfPython Challenge Done</li>
+            <li>30DaysOfJavaScript Challenge Ongoing</li>
+            <li>30DaysOfReact Challenge Coming</li>
+            <li>30DaysOfFullStack Challenge Coming</li>
+            <li>30DaysOfDataAnalysis Challenge Coming</li>
+            <li>30DaysOfReactNative Challenge Coming</li>
+            <li>30DaysOfMachineLearning Challenge Coming</li>
+        </ul>
+		
+    </div>
+	
+	
+	<script> 
+	const main = document.querySelector('.wrapper')
+		console.log(main);
+		
+
+	
+	main.style.display = 'flex';
+	main.style.flexDirection = 'column';
+	main.style.alignItems = 'center';
+	main.style.justifyContent ='center';
+	main.style.fontFamily = 'arial';
+	
+	const heading = document.querySelector('h2');
+	heading.style.textDecoration = 'underline'
+	console.log(heading)
+	
+	const main_heading = document.querySelector('h1')
+	main_heading.innerHTML = '<span>Asabeneh Yetayeh challenges in</span><span> 2020</span>'
+	
+	const span = document.querySelectorAll('span');
+	span[0].style.fontSize = '30px'
+	span[1].style.fontSize = '80px'
+	
+	function colorTwenty() {
+		span[1].style.color = generateColor()
+	}
+	
+	setInterval(colorTwenty, 1000)
+	
+	
+	const time = document.createElement('span')
+	time.className = 'timing'
+	main.appendChild(time)
+	
+	const uls = document.querySelector('ul')
+	main.insertBefore(time, uls);
+	
+	
+	function setTime() {
+	time.innerHTML = dateTime();
+	
+	}
+	setInterval(setTime, 1000)
+	
+	function generateColor() {
+		let character = 'abcdef1234567890';
+		let color = ''
+		for(i = 0 ; i < 6; i++){
+			 random = character[Math.floor(Math.random()*character.length)]
+			 color += random;
+		}
+		
+	return `#${color}`
+	}
+	
+	function changeColor() {
+		time.style.backgroundColor = generateColor()
+	}
+	setInterval(changeColor, 1000)
+	
+	time.style.padding = '12px 25px 12px 25px'
+	
+	function dateTime() {
+	const now = new Date();
+	let year = now.getFullYear() ;
+	let month = now.getMonth();
+	let  date = now.getDate();
+	let hour = now.getHours();
+	let minute = now.getMinutes();
+	let second = now.getSeconds();
+	let monthName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+	for(i = 0; i < monthName.length; i++){
+	if(month === i)
+	{
+		month = monthName[i];
+	}
+	}
+	
+		if(date < 10 )
+	{
+		date = `0${date}`;
+	}
+		if(hour < 10 )
+	{
+		hour = `0${hour}`;
+	}
+		if(minute < 10 )
+	{
+		minute = `0${minute}`;
+	}
+		if(second < 10 )
+	{
+		second = `0${second}`;
+	}
+	
+	return (`${month} ${date}, ${year} ${hour}:${minute}:${second} `)
+	
+	}
+	
+	
+	const challenges = document.querySelectorAll('li')
+	console.log(challenges)
+	
+	for(i = 0; i < challenges.length; i++){
+	challenges[i].style.listStyleType = 'none';
+	challenges[i].style.padding = '10px'
+	challenges[i].style.width = '800px'
+	challenges[i].style.margin = '1.5px'
+	
+	}
+	challenges[0].style.backgroundColor = '#5bbc7a';
+	challenges[1].style.backgroundColor = '#f7dc5c';
+	
+	for(i = 2; i < challenges.length; i++ )
+	{
+		challenges[i].style.backgroundColor = '#eb695b';
+	}
+	
+	
+	
+	
+	
+	</script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const body = document.querySelector('body')
+
+        body.style.display = 'flex'
+        body.style.flexDirection = 'column'
+        body.style.alignItems = 'center'
+        body.style.width = '100%'
+        body.style.height = '100%'
+        body.style.marginTop = '15%'
+        body.style.fontFamily = 'arial'
+        body.style.fontSize = '35px'
+        body.style.fontWeight = 550
+        body.style.color = '#424242'
+        body.style.whiteSpace = 'nowrap'
+
+        const command_div = document.createElement('div')
+        body.appendChild(command_div)
+        command_div.style.width = '20%'
+        command_div.style.padding = '50px 70px'
+        command_div.innerText = 'Press any keyboard key'
+        command_div.style.boxShadow = '0px 0px 10px 3px grey'
+        command_div.style.display = 'flex'
+        command_div.style.justifyContent = 'center'
+        command_div.style.alignItems = 'center'
+
+
+        document.addEventListener('keydown', function (pressed_key) {
+          
+            command_div.textContent = `You Pressed ${pressed_key.key}`
+            const code = document.createElement('div')
+
+            code.style.width = '6%'
+            code.style.padding = '40px 30px'
+
+            code.style.boxShadow = '0px 0px 10px 3px grey'
+            code.style.display = 'flex'
+            code.style.justifyContent = 'center'
+            code.style.alignItems = 'center'
+            code.style.marginTop = '60px'
+            code.style.color = '#5bbc7a'
+
+            body.appendChild(code)
+            code.textContent = `${pressed_key.key.charCodeAt(0)}`
+
+            document.addEventListener('keydown', () => {
+                body.removeChild(code)
+            })
+        })
+
+
+
+
+    </script>
+
+</body>
+
+</html>

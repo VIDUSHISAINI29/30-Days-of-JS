@@ -1,17 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promise</title>
 </head>
+
 <body>
 
     <script>
 
-            
+
+
+        //	#######  Exercise : LEVEl - 1  #######
+
+
+        //			**** Ques - 1 ****
+
+
+        const countriesAPI = 'https://restcountries.com/v2/all';
+
+        fetch(countriesAPI)
+
+            .then(resp => resp.json())
+            .then(data => {
+                data.forEach(country => {
+                    console.log(`Country : ${country.name}`);
+                    console.log(`Capital : ${country.capital}`);
+                    console.log(`Languages : ${country.languages.map(lang => lang.name).join(', ')}`);
+                    console.log(`Population : ${country.population}`);
+                    console.log(`Area : ${country.area} km²`);
+                    console.log('--------------------------------------');
+                })
+            })
+            .catch(error => console.log('Error fetching data : ', error))
+
+
+        //	#######  Exercise : LEVEl - 2  #######
+
+        //			**** Ques - 1 ****
+
+
+        const catsAPI = 'https://api.thecatapi.com/v1/breeds'
+        fetch(catsAPI)
+            .then(respond => respond.json())
+            .then(data => {
+                data.forEach(cat => {
+                    console.log(`Name : ${cat.name}`);
+                })
+            })
+            .catch(error => console.log('Error fetching data : ', error))
+
+
+        //	#######  Exercise : LEVEl - 3  #######
+
+
+        //			**** Ques - 1 ****
+
+
+
+        const catsAPIs = 'https://api.thecatapi.com/v1/breeds'
+        fetch(catsAPIs)
+            .then(respond => respond.json())
+            .then(data => {
+                let totalWeight = 0;
+                let count = 0;
+                let averageWeight = 0;
+                data.forEach(cat => {
+
+                    const Weight = cat.weight.metric.split(' - ').map(parseFloat)
+                    let sum = (Weight[0] + Weight[1]) / 2
+                    totalWeight += sum
+                    count++
+                    console.log(totalWeight)
+                    console.log(count);
+                    averageWeight = totalWeight / count;
+
+                })
+                console.log(parseInt(averageWeight))
+            })
+            .catch(error => console.log('Error fetching data : ', error))
+
+
+
+        //			**** Ques - 2 ****
+
+
+        const countriesAPIs = 'https://restcountries.com/v2/all';
+        fetch(countriesAPIs)
+            .then(repond => repond.json())
+            .then(data => {
+                const array = [];
+                data.forEach(country => {
+                    const areas = country.area
+                    const names = country.name
+                    const object = {}
+                    object.Name = `${names}`
+                    object.area = `${areas}`
+                    array.push(object)
+                    array.sort((a, b) => b.area - a.area)
+
+
+                })
+                console.log(array.slice(0, 10));
+
+            })
+            .catch(error => console.log('Error fetching data : ', error))
+
+
+        //			**** Ques - 3 ****
+
+
+        const countriesAPIss = 'https://restcountries.com/v2/all';
+        fetch(countriesAPIss)
+            .then(res => res.json())
+            .then(data => {
+                let lang_arra = []
+                let lang;
+
+                data.forEach(state => {
+                    lang = state.languages
+                    let tries;
+
+                    for (i = 0; i < lang.length; i++) {
+                        tries = lang[i]
+                        lang_arra.push(tries.name)
+                    }
+                })
+                let lang_Set = new Set(lang_arra)
+                console.log(lang_Set);
+                let unique_lang = Array.from(lang_Set)
+                console.log('Total languages = ',unique_lang.length);
+            })
+            .catch(error => console.log('Error fetching data : ', error))
+
+
+
+
+
+
+
+
+
 
     </script>
-    
+
 </body>
+
 </html>

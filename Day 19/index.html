@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    
+    <script>
+
+           //	#######  Exercise : LEVEl - 1  #######
+
+
+        //			**** Ques - 1 ****
+
+ function myName() {
+
+    
+    
+    function names(){
+        let name = 'Vidushi Saini'
+        return name
+    }
+    return names()
+ }  
+
+ let identity = myName();
+ console.log(identity);
+
+
+   //	#######  Exercise : LEVEl - 2  #######
+
+
+        //			**** Ques - 1 ****
+
+        function outer() {
+            function inner1(){
+                let text1 = 'I am the best.'
+                return text1
+            }
+
+            function inner2(){
+                return `Whole power of the universe resides in me.`
+            }
+            function inner3(){
+                return `I can get everything that is required in my journey.`
+            }
+            return{
+                first : inner1(),
+                second : inner2(),
+                third : inner3()
+            }
+
+        }
+        let result = outer();
+        console.log(result.first);
+        console.log(result.second);
+        console.log(result.third);
+
+
+         //	#######  Exercise : LEVEl - 3  #######
+
+
+        //			**** Ques - 1 ****
+
+        function personAccount(){
+
+                function firstName(){
+                    return 'Sakshi'
+                }
+                function lastName(){
+                    return 'Saini'
+                }
+                function 
+
+
+
+        }
+
+
+
+
+    </script>
+
+
+</body>
+</html>

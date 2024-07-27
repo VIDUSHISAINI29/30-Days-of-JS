@@ -2,7 +2,8 @@
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
-    font-size: 18px;
+    font-size: 14px;
+    
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .globe{
@@ -12,6 +13,71 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-   filter: blur(3px);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   
+   position: absolute;
+  
 
+}
+body{
+    background-color:#ffffe3;
+}
+.globe::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(135, 155, 210, 0.512); /* Adjust color and transparency */
+    z-index: 1;
+}
+.main_heading{
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 55px;
+}
+.total_countries{
+    position: relative;
+    z-index: 2;
+    font-size: 18px;
+    color: white;
+}
+.buttons{
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+.buttons button{
+    margin: 10px 2px;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+    background-color: #895be6;
+    border: none;
+    color: white;
+}
+.search{
+    outline: none;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    width: 35%;
+    margin: 10px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.searchbar{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
 }

@@ -24,6 +24,10 @@
 }
 body{
     background-color:#ffffe3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
 }
 .globe::before{
     content: "";
@@ -81,3 +85,37 @@ body{
     position: relative;
     z-index: 2;
 }
+.country_div_container{
+    width: 82%;
+    padding: 20px;
+   
+    margin-top: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    text-align: center;
+    background-image: url('assets/map_image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

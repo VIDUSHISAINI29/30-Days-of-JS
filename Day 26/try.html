@@ -3,53 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transparent Shade Over Background Image</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .background-container {
-            position: relative;
-            height: 50vh; /* Adjust the height as needed */
-            width: 100%;
-            background-image: url('your-image-url.jpg'); /* Replace with your image URL */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            overflow: hidden;
-        }
-
-        .background-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5); /* Adjust color and transparency */
-            z-index: 1;
-        }
-
-        .content {
-            position: relative;
-            z-index: 2;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+    <title>Task Continuation Example</title>
 </head>
 <body>
-    <div class="background-container">
-        <div class="content">
-            <h1>Welcome to My Website</h1>
-            <p>This is some clear content over a transparent shaded background image.</p>
-        </div>
-    </div>
-    <div>
-        <!-- Your other content goes here -->
-    </div>
+    <button id="startButton">Start Task</button>
+    <div id="output"></div>
+
+    <script>
+        // Flag to indicate whether the task has started
+        let taskStarted = false;
+
+        // Define the task function
+        function performTask() {
+            // Example task: append a message to the output div every second
+            setInterval(() => {
+                const outputDiv = document.getElementById('output');
+                const message = document.createElement('p');
+                message.textContent = 'Task is running...';
+                outputDiv.appendChild(message);
+            }, 1000);
+        }
+
+        // Set up the event listener for the button
+        document.getElementById('startButton').addEventListener('click', () => {
+            if (!taskStarted) {
+                taskStarted = true; // Set the flag to true
+                performTask(); // Start the task
+            }
+        });
+    </script>
 </body>
 </html>

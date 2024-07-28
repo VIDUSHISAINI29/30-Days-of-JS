@@ -1,26 +1,17 @@
 let btn1 = document.querySelector('.starting')
 let btn2 = document.querySelector('.any_word')
 let btn3 = document.querySelector('.icon')
+let prompt = document.querySelector('.search')
+  console.log(prompt.value);
 
-btn1.addEventListener('click', () => {
-    btn1.style.backgroundColor = '#531cb0'
-    btn2.style.backgroundColor = '#895be6'
-    btn3.style.backgroundColor = '#895be6'
-})
+  function clearDiv() {
+    while (div.firstChild) {
+        div.removeChild(div.firstChild);
+    }
+}
 
-btn2.addEventListener('click', () => {
-    btn2.style.backgroundColor = '#531cb0'
-      btn3.style.backgroundColor = '#895be6'
-      btn1.style.backgroundColor = '#895be6'
-})
 
-btn3.addEventListener('click', () => {
-    btn3.style.backgroundColor = '#531cb0'
-        btn2.style.backgroundColor = '#895be6'
-        btn1.style.backgroundColor = '#895be6'
-})
-
-const countries = [
+let countries = [
     'Afghanistan',
     'Albania',
     'Algeria',
@@ -215,14 +206,158 @@ const countries = [
     'Zambia',
     'Zimbabwe'
   ]
+  let div = document.querySelector('.country_div_container')
+let btn1_flag = false;
 
-  let prompt = document.querySelector('.search')
-  console.log(prompt.value);
+countries = countries.map(country => country.toUpperCase());
+console.log(countries);
 
-  let search_tag = document.querySelector()
+btn1.addEventListener('click', () => {
+    btn1.style.backgroundColor = '#531cb0'
+    btn2.style.backgroundColor = '#895be6'
+    btn3.style.backgroundColor = '#895be6'
 
-  for( i = 0; i < countries.length; i++)
-    {
-        let size = prompt.value.length
-        console.log(size);
+    
+   if(prompt.value.trim() !== ' '){
+    btn1_flag = true;
+   }
+   if(prompt.value.trim() !== ' '){
+    btn2_flag = false;
+   }
+   
+})
+
+prompt.addEventListener('input', () => {
+ 
+    if(btn1_flag ){
+       
+        country_sequence_form()
     }
+    if(btn2_flag){
+        country_anyword_form()
+    }
+    
+    
+})
+
+let selected_country_copy = []
+
+function country_sequence_form(){
+
+    let size = prompt.value.trim().toUpperCase();
+
+
+    clearDiv()
+
+      let selected_country = []
+  for( i = 0; i < countries.length; i++)
+      {
+         size = prompt.value.trim().toUpperCase();
+
+      
+          let part = countries[i].startsWith( size)
+          if(part)
+      {
+          selected_country.push(countries[i])
+              }
+      }
+      for(j = 0; j < selected_country.length; j++)
+          {
+                    let elem = document.createElement('div')
+                           elem.setAttribute('class', 'name')
+                           elem.style.width = '200px'
+                           elem.style.height = '210px'
+                           elem.style.margin = '20px'
+                           elem.innerText = selected_country[j]
+                           elem.style.backgroundColor = '#ef2d4c'
+                           div.appendChild(elem)
+                
+               
+               }
+             
+      console.log(selected_country);
+      selected_country_copy = selected_country
+}
+
+
+function country_anyword_form(){
+
+    let size = prompt.value.trim().toUpperCase();
+
+
+    clearDiv()
+
+      let selected_country = []
+  for( i = 0; i < countries.length; i++)
+      {
+         size = prompt.value.trim().toUpperCase();
+
+      
+          let part = countries[i].includes( size)
+          if(part)
+      {
+          selected_country.push(countries[i])
+              }
+      }
+      for(j = 0; j < selected_country.length; j++)
+          {
+                    let elem = document.createElement('div')
+                           elem.setAttribute('class', 'name')
+                           elem.style.width = '200px'
+                           elem.style.height = '210px'
+                           elem.style.margin = '20px'
+                           elem.innerText = selected_country[j]
+                           elem.style.backgroundColor = '#ef2d4c'
+                           div.appendChild(elem)
+                
+               
+               }
+            }
+
+            let btn2_flag = false;
+btn2.addEventListener('click', () => {
+    btn2.style.backgroundColor = '#531cb0'
+      btn3.style.backgroundColor = '#895be6'
+      btn1.style.backgroundColor = '#895be6'
+
+      if(prompt.value.trim() !== ' '){
+        btn2_flag = true;
+       }
+       if(prompt.value.trim() !== ' '){
+        btn1_flag = false;
+       }
+})
+
+btn3.addEventListener('click', () => {
+    btn3.style.backgroundColor = '#531cb0'
+        btn2.style.backgroundColor = '#895be6'
+        btn1.style.backgroundColor = '#895be6'
+        countries.reverse()
+        
+        clearDiv()
+        let selected_country = []
+        for(j = 0; j < countries.length; j++)
+            {
+                selected_country.push(countries[j])
+                      let elem = document.createElement('div')
+                             elem.setAttribute('class', 'name')
+                             elem.style.width = '200px'
+                             elem.style.height = '210px'
+                             elem.style.margin = '20px'
+                             elem.innerText = selected_country[j]
+                             elem.style.backgroundColor = '#ef2d4c'
+                             div.appendChild(elem)
+                  
+                 
+                 }
+
+  
+})                                                                                   
+
+
+
+  
+
+
+
+ 

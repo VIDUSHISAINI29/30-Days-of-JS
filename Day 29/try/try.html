@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .color-letter {
+            font-size: 159px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="text-container">
+        This is a sample text to demonstrate changing colors of each word.
+    </div>
+
+
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+    const textContainer = document.getElementById('text-container');
+    const text = textContainer.textContent;
+    const colors = ['red', 'green', 'blue', 'orange', 'purple', 'pink', 'yellow', 'cyan', 'magenta', 'lime', 'teal', 'violet'];
+
+    function getRandomColor() {
+        return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    textContainer.innerHTML = ''; // Clear the container
+
+    Array.from(text).forEach(char => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.classList.add('color-letter');
+        span.style.color = getRandomColor();
+        textContainer.appendChild(span);
+    });
+});
+
+
+    </script>
+</body>
+</html>

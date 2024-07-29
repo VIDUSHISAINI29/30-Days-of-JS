@@ -254,9 +254,6 @@ displayKeywords();
       }
      
   }
-
- 
-  
   
     displayTitle(2000);
   

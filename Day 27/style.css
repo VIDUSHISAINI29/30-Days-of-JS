@@ -15,8 +15,85 @@
 }
 .name{
     font-size: 70px;
-    letter-spacing: 6px;
-    color: navy;
+    letter-spacing: 4px;
+    color: rgb(255, 0, 149);
     
 }
-.qualities
+.qualities{
+    margin-top: 30px;
+    width: 75%;
+    background-color: rgb(255, 190, 217);
+    height: 100px;
+    display: flex;
+    align-items: center;
+
+
+}
+.quality_data{
+    font-size: 25px;
+    margin-left: 20px;
+    animation-timing-function: ease;
+    position: relative;
+    animation: mymove 2.5s;
+    animation-fill-mode: forwards;
+    color: rgb(255, 0, 149);
+}
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 70px;}
+  }
+
+  .icon{
+    font-size: 25px;
+    margin-left: 20px;
+  }
+  .about{
+    width: 75%;
+    margin-top: 20px;
+    line-height: 30px;
+    color: rgb(255, 87, 185);
+  }
+  .course_div{
+    display: flex;
+    width: 75%;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+  .course{
+    margin-top: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    color: rgb(255, 87, 185);
+    text-align: center;
+    width: 240px;
+    height: 200px;
+    background-color: rgb(241, 241, 241);
+  }
+  .course:hover{
+    transform: scale(1.05);
+    background-color: rgb(255, 190, 217);
+  }
+  #last_span{
+    margin-top: 50px;
+    font-size: 20px;
+    color: rgb(255, 87, 185);
+  }
+  #child_span{
+    margin-top: 50px;
+    font-size: 40px;
+    margin-left: 5px;
+      animation: fadeIn 1s ease;
+    
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

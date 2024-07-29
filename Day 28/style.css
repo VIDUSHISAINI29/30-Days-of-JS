@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Sevillana&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+.main_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading{
+    font-size: 30px;
+    margin-top: 80px;
+    color: rgb(1, 108, 190);
+}
+.inputs_btns{
+    display: flex;
+width: 50%;
+justify-content: space-evenly;
+}
+.info{
+    width: 130px;
+    padding: 6px;
+    margin-top: 30px;
+    outline: none;
+    border: 2px solid rgb(0, 145, 255);
+}
+#addplayer{
+    width: 130px;
+    margin-top: 30px;
+   height: 32px;
+   border: 2px solid rgb(0, 145, 255);
+   background-color: rgb(212, 235, 252);
+}
+
+
+.player2{
+    width: 50%;
+    background-color: rgb(212, 235, 252);
+    margin: 50px 0px 0px 0px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.player4{
+    width: 50%;
+    background-color: rgb(212, 235, 252);
+    margin: 10px 0px 0px 0px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.copy{
+    margin: 10px 0px 0px 0px;
+}
+.name_time{
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    color: rgb(1, 108, 190);
+    font-size: 15px;
+    white-space: nowrap;
+   
+}
+.score{
+    width: 15%;
+    color: rgb(1, 108, 190);
+    height: 30px;
+   
+    text-align: center;
+    display: flex;
+    align-items: center;    
+
+}
+.score_copy{
+    width: 15%;
+    color: rgb(1, 108, 190);
+    height: 30px;
+   
+    text-align: center;
+    display: flex;
+    align-items: center;    
+
+}
+.country{
+    width: 20%;
+    color: rgb(1, 108, 190);
+    font-size: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.customize{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    justify-content: space-evenly;
+    height: 50px;
+    width: 25%;
+}
+.custom_btn{
+display: flex;
+justify-content: center;
+align-items: center;
+    width: 40px;
+    font-size: 15px;
+    height:40px;
+    border:none;
+    background-color: #ffffff;
+    border-radius: 50%;
+    color: rgb(1, 108, 190);
+}
+
+.custom_btn:hover{
+    background-color: rgb(234, 231, 231);
+    cursor: pointer;
+}
+.custom_btn2:hover{
+    background-color: rgb(234, 231, 231);
+    cursor: pointer;
+}
+.custom_btn3:hover{
+    background-color: rgb(234, 231, 231);
+    cursor: pointer;
+}
+.alert{
+    margin-top: 20px;
+    color: red;
+    display: none;
+}

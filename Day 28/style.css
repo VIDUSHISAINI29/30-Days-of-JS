@@ -70,6 +70,7 @@ justify-content: space-evenly;
     white-space: nowrap;
    
 }
+
 .score{
     width: 15%;
     color: rgb(1, 108, 190);
@@ -118,6 +119,9 @@ align-items: center;
     background-color: #ffffff;
     border-radius: 50%;
     color: rgb(1, 108, 190);
+}
+#span_time{
+    font-size: 10px;
 }
 
 .custom_btn:hover{

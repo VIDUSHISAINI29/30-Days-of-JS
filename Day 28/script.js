@@ -9,7 +9,7 @@
     let cst_elem = document.querySelector('.cst1')
     let cst_elem2 = document.querySelector('.cst2')
     let cst_elem3 = document.querySelector('.cst3')
-
+    let time_elem = document.querySelector('#span_time')
     let copy_two = document.querySelector('.player2')
     let score_elem = document.querySelector('.score')
 
@@ -27,10 +27,10 @@
     cst_elem.addEventListener('click', () => {
         copy_two.style.display = 'none'
     })
-
-
-
-
+console.log(time_elem);
+    let time_func = dateTime()
+    console.log(time_func);
+    time_elem.textContent = `${time_func}`
 
 
     add_elem.addEventListener('click', () => {
@@ -53,33 +53,29 @@
             div_time_name.setAttribute('class', 'name_time')
         
             let span1 = document.createElement('span')
+            span1.setAttribute('class','name')
             div_time_name.appendChild(span1)
             span1.innerText = `${input_elem1.value.toUpperCase()} ${input_elem2.value.toUpperCase()}`
-        
+            span1.style.fontSize = '15px'
             
             let span2 = document.createElement('span')
+            span2.setAttribute('id','span_time')
             div_time_name.appendChild(span2)
+            span2.style.fontSize = '10px'
+
+            span2.textContent = dateTime()
         
             let div_country = document.createElement('div')
             new_player.appendChild(div_country)
             div_country.setAttribute('class','country')
             div_country.innerText = input_elem3.value.toUpperCase()
-        
-        
             let div_score = document.createElement('div')
             div_score.setAttribute('class','score_copy')
             new_player.appendChild(div_score)
             div_score.innerText = input_elem4.value
-        
-        
-        
-        
             let div_customize = document.createElement('div')
             div_customize.setAttribute('class', 'customize')
         new_player.appendChild(div_customize)
-        
-        
-        
             let div_btn1 = document.createElement('div')
             div_customize.appendChild(div_btn1)
             div_btn1.setAttribute('class', 'custom_btn')
@@ -120,3 +116,39 @@
         });
 
 
+        function dateTime() {
+            const now = new Date();
+            let year = now.getFullYear() ;
+            let month = now.getMonth();
+            let  date = now.getDate();
+            let hour = now.getHours();
+            let minute = now.getMinutes();
+            let second = now.getSeconds();
+            let monthName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            for(i = 0; i < monthName.length; i++){
+            if(month === i)
+            {
+                month = monthName[i];
+            }
+            }
+            
+                if(date < 10 )
+            {
+                date = `0${date}`;
+            }
+                if(hour < 10 )
+            {
+                hour = `0${hour}`;
+            }
+                if(minute < 10 )
+            {
+                minute = `0${minute}`;
+            }
+                if(second < 10 )
+            {
+                second = `0${second}`;
+            }
+            
+            return (`${month} ${date}, ${year} ${hour}:${minute} `)
+            
+            }

@@ -1,0 +1,125 @@
+*{
+    padding:0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.main_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.main_heading{
+    color: rgb(255, 155, 56);
+    text-align: center;
+    padding: 0px;
+    font-size: 55px;
+    background-color: rgb(234, 234, 234);
+    width: 100%;
+ 
+}
+.total_countries{
+    font-size: 18px;
+   background-color: rgb(234, 234, 234);
+ width: 100%;
+ text-align: center;
+}
+.later{
+    background-color: rgb(234, 234, 234);
+ width: 100%;
+ text-align: center;
+ color: rgb(255, 128, 0);
+ font-size: 15px;
+ margin: 5px;
+}
+.search_country{
+   
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid rgb(227, 227, 227);
+    
+    padding: 10px;
+    margin: 20px;
+    width: 35%;
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+    width: 100%;
+}
+.output_btn{
+    padding: 5px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(255, 155, 56);
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.output_btn1{
+    padding: 3px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(255, 155, 56);
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.output_btn2{
+    padding: 3px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(255, 155, 56);
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.output_btn img{
+    text-align: center;
+}
+.second_div{
+    background-color: rgb(210, 210, 210);
+}
+.btns img{
+margin: 0px 0px 8px 8px;
+}
+.country_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 350px;
+   margin: 6px;
+    background-color: #fff;
+    border: 2px solid  rgb(255, 155, 56);
+    border-radius: 10px;
+    
+}
+.info{
+   margin-left: 20px;
+   text-align: center;
+    
+}
+.name{
+    color:  rgb(255, 155, 56);
+    font-size: 15px;
+    margin: 7px;
+}
+.flag_svg{
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
+}

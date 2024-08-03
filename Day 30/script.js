@@ -2877,6 +2877,7 @@ function clearDiv() {
 const main_div = document.querySelector('.main_container')
 const prompt = document.querySelector('.search_country')
 let btn1= document.querySelector('.output_btn1')
+let btn2= document.querySelector('.output_btn2')
 let later_elem = document.querySelector('.later')
 
 
@@ -2897,6 +2898,12 @@ let two_div = document.querySelector('.second_div')
 btn1.addEventListener('click', () => {
 
 	get_Country()
+
+})
+
+btn2.addEventListener('click', () => {
+
+	get_Country_Capital()
 
 })
 
@@ -2952,7 +2959,77 @@ function get_Country(){
 		{
 			
 			let language = medium[k]
-			console.log(language);
+		
+			identity3.innerText = `Languages: ${language}`
+		}
+		let identity4 = document.createElement('span')
+		country_box.appendChild(identity4)
+		identity4.classList.add('info')
+		identity4.innerText = `Population: ${popul}`
+
+	
+    }
+
+
+}
+
+
+
+function get_Country_Capital(){
+	// console.log(countries_obj[0].capital);
+	const selected_country = [];
+    const input_value = prompt.value.trim().toUpperCase()
+	console.log(input_value)
+	clearDiv()
+	for(i = 0; i < countries_obj.length; i++)
+		
+		{
+			let country_part = countries_obj[i].capital.startsWith(input_value)
+			
+			if(country_part){
+				selected_country.push(countries_obj[i])
+			}
+		}
+	
+		let length_later = selected_country.length
+		later_elem.innerText = `${length_later} countries satisfied the search criteria`
+    for(j = 0; j < selected_country.length; j++)
+    {
+		let name = selected_country[j].name
+		let capital = selected_country[j].capital
+		let popul = selected_country[j].population
+    const country_box = document.createElement('div')
+	country_box.classList.add('country_div')
+    div2.appendChild(country_box)
+	
+	
+	
+   
+	let flag_img = document.createElement('img')
+	flag_img.classList.add('flag_svg')
+	country_box.appendChild(flag_img)
+	flag_img.src = selected_country[j].flag
+	
+	let identity = document.createElement('span')
+	country_box.appendChild(identity)
+	identity.classList.add('name')
+	identity.innerText = `${name}`
+
+	let identity2 = document.createElement('span')
+	country_box.appendChild(identity2)
+	identity2.classList.add('info')
+	identity2.innerText = `Capital: ${capital}`
+	let identity3 = document.createElement('span')
+	country_box.appendChild(identity3)
+	identity3.classList.add('info')
+	let lang = selected_country[j].languages
+	let medium = []
+	medium.push(lang)
+	for(k = 0; k < medium.length; k++)
+		{
+			
+			let language = medium[k]
+			
 			identity3.innerText = `Languages: ${language}`
 		}
 		let identity4 = document.createElement('span')

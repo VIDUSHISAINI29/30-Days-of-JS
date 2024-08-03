@@ -36,7 +36,8 @@
 .alert{
     text-align: center;
     font-size: 13px;
-    color: rgb(219, 17, 17);
+    color: rgb(255, 0, 0);
+    
     margin-bottom: 15px;
 }
 .inputs_container input{

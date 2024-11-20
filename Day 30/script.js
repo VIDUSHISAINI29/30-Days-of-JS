@@ -2937,6 +2937,7 @@ function get_Country(){
 			if(country_part){
 				selected_country.push(countries_obj[i])
 				selected_country_population.push(countries_obj[i].population)
+				console.log(country_part);
 
 			}
 		}
